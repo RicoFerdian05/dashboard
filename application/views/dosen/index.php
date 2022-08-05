@@ -1,12 +1,7 @@
         <!-- Begin Page Content -->
                 <div class="container-fluid">
                 <?php 
-                        // var_dump($info_mahasiswa);
-                        // var_dump($kelas);
-                        // var_dump($asal_mhs); 
-                        // echo json_encode($asal_mhs);
-                        // var_dump((base_url('assets/geojson/12.geojson')));
-                        // var_dump($pekerjaan_wali);
+                        
                         ?>
                 <?php //var_dump((int)$kelas[0]['id']);var_dump($nilai_ipk[0][1]);var_dump($nilai_ipk) ?>
                     <!-- Page Heading -->
