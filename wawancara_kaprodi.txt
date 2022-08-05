@@ -1,0 +1,45 @@
+1. Apakah bapak pernah melakukan monitoring performa terhadap keseluruhan mahasiswa?
+
+Pernah, persiapan akreditasi yaitu
+        = ipk rata2, data prestasi, TAK, rekognisi nilai.
+        = Dari BK meminta nama wisudawan terbaik
+
+2. Bagaimana cara memonitoring performa ?
+Melihat data di igracias, tentang lomba meminta data ke BK.
+Meminta data ke BK Pusat dan fakultas (mendahulukan bk fakultas) = meminta data prestasi yang diraih prodi d3si
+
+3. Kendala dalam memonitorig mahasiswa?
+= Tidak memiliki dashboard khusus untuk memantau prestasi mahasiswa, IPK dalam menu nilai.
+= Profil mahasiswa => kehadiran, nilai, TAK, kecuali prestasi, tes EPRT
+
+4. Apakah diperlukan aplikasi untuk memonitoring performa mahasiswa?
+= Sangat perlu
+
+5. Figma (Performa perorangan / keseluruhan ?)
+a. IP semester (untuk persemester), IPK (Kumulatif)
+b. Dahsboard Perorangan, mirip dashboard mirip namun Perorangan
+c. Status mahasiswa (alumni (diganti lulus), aktif, Cuti, Non-aktif (gajelas aktif engga, cuti engga), Undur diri)
+d. Jenis Beasiswa
+e. Beasiswa banyak macamnya, (Beasiswa banyak itu dihindari)
+f. Filter Kehadiran diganti perkelas
+g. Data TAK sama dengan kehadiran
+h. Data EPrt (nama, nilai Eprt)
+i. SKPI (Surat Keterangan Pendamping Ijazah) syarat minimal 2 kegiatan kepemimpinan
+
+6. Harapan
+Mahasiwa Terbaik
+
+
+7. Isi Table Beasiswa
+- Nama Lengkap
+- Tipe (internal/eksternal)
+- Jenis
+- Tahun Akademik
+- Nama Beasiswa
+
+8. prestasi
+- Nama Lengkap
+- Peringkat
+- Kategori (individu/kelompok)
+- Penyelenggara
+- Nama Kompetisi
