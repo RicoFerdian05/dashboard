@@ -43,3 +43,15 @@ Mahasiwa Terbaik
 - Kategori (individu/kelompok)
 - Penyelenggara
 - Nama Kompetisi
+
+
+
+Buku :
+1. Perancangan antar muka ( Contoh ada di bukune mas e ) -> kurang dashboard admin (DONE)
+2. Implementasi ( Screenshot hasil )
+3. Pengujian 
+4. Tugas Admin adalah mengelola data master
+5. Tugas Kemahasiswaan mengelola data beasiswa, prestasi dan TAK
+6. Saran
+7. Konten ?
+
