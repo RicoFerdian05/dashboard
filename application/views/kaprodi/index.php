@@ -81,20 +81,6 @@
                         <!-- Card Header - Dropdown -->
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">RATA-RATA IP SEMESTER</h6>
-                            <div class="dropdown no-arrow">
-                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                    aria-labelledby="dropdownMenuLink">
-                                    <div class="dropdown-header">Dropdown Header:</div>
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
                         </div>
                         <!-- Card Body -->
                         <div class="card-body">
@@ -111,20 +97,6 @@
                         <!-- Card Header - Dropdown -->
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">STATUS MAHASISWA</h6>
-                            <div class="dropdown no-arrow">
-                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                    aria-labelledby="dropdownMenuLink">
-                                    <div class="dropdown-header">Dropdown Header:</div>
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
                         </div>
                         <!-- Card Body -->
                         <div class="card-body">
@@ -160,20 +132,6 @@
                         <!-- Card Header - Dropdown -->
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">JUMLAH PENERIMA BEASISWA</h6>
-                            <div class="dropdown no-arrow">
-                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                    aria-labelledby="dropdownMenuLink">
-                                    <div class="dropdown-header">Dropdown Header:</div>
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
                         </div>
                         <!-- Card Body -->
                         <div class="card-body">
@@ -207,18 +165,6 @@
                         <!-- Card Header - Dropdown -->
                         <div class="card-header d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">BEASISWA</h6>
-                            <!-- Dropdown Sort By -->
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    SORT BY
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
                         </div>
                         <!-- Card Body -->
                         <div class="card-body">
@@ -268,18 +214,6 @@
                         <!-- Card Header - Dropdown -->
                         <div class="card-header d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">PRESTASI</h6>
-                            <!-- Dropdown Sort By -->
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    SORT BY
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
                         </div>
                         <!-- Card Body -->
                         <div class="card-body">
@@ -293,6 +227,7 @@
                                             <th scope="col">KATEGORI</th>
                                             <th scope="col">PENYELENGGARA</th>
                                             <th scope="col">NAMA KOMPETISI</th>
+                                            <th scope="col">TAHUN</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -307,6 +242,7 @@
                                             <td><?= $key['kategori']; ?></td>
                                             <td><?= $key['penyelenggara']; ?></td>
                                             <td><?= $key['nama_kompetisi']; ?></td>
+                                            <td><?= $key['tahun']; ?></td>
                                         </tr>
                                         <?php };?>
                                     </tbody>
@@ -325,18 +261,6 @@
                         <!-- Card Header - Dropdown -->
                         <div class="card-header d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">KEHADIRAN</h6>
-                            <!-- Dropdown Sort By -->
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    SORT BY
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
                         </div>
                         <!-- Card Body -->
                         <div class="card-body">
@@ -380,18 +304,6 @@
                         <!-- Card Header - Dropdown -->
                         <div class="card-header d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">TAK MAHASISWA</h6>
-                            <!-- Dropdown Sort By -->
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    SORT BY
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
                         </div>
                         <!-- Card Body -->
                         <div class="card-body">

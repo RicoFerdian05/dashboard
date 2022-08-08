@@ -148,10 +148,6 @@
                                 
                             <?php endif ?>
                             <a href="" class="btn btn-primary mb-3 newNilaiMataKuliahModalButton" data-toggle="modal" data-target="#newNilaiMataKuliahModal">Add New Course Score</a>
-                            <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#newUploadNilaiMataKuliahModal">
-                                <i class="fas fa-upload"></i>
-                                Upload 
-                            </button>
                             <div class="card">
                                 <div class="card-header"><i class="fas fa-table mr-1"></i>Data Nilai Mata Kuliah</div>
                                 <div class="card-body">

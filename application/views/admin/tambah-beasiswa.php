@@ -64,9 +64,9 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row mt-3">
             <div class="col">
-                <button type="submit" class="btn btn-success">Save</button>
+                <button type="submit" class="btn btn-success">Submit</button>
                 <a href="<?= base_url('Admin/') ?>" type="button" class="btn btn-secondary">Cancel</a>
 
             </div>

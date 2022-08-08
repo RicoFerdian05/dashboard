@@ -14,10 +14,18 @@
 		<tbody>
 			<?php $n = 1; ?>
 			<?php foreach ($mahasiswa_ip_tertinggi as $key): ?>
-				<?php $ip_past = $this->db->get_where('ip_semester', [
-					'id_nilai_mahasiswa' => $key['nmid'],
-					'semester' => $cur_semester-1,
-				])->row_array(); ?>
+				<?php 
+				if ($cur_semester == 1) {
+					$ip_past = $this->db->get_where('ip_semester', [
+						'id_nilai_mahasiswa' => $key['nmid']
+					])->row_array();
+				} else {
+					$ip_past = $this->db->get_where('ip_semester', [
+						'id_nilai_mahasiswa' => $key['nmid'],
+						'semester' => $cur_semester-1,
+					])->row_array();
+				}
+				?>
 				<tr class="table-success">
 					<th><?= $n++; ?></th>
 					<td><?= $key['nim'] ?></td>
@@ -46,10 +54,18 @@
 		<tbody>
 			<?php $n = 1; ?>
 			<?php foreach ($mahasiswa_ip_terendah as $key): ?>
-				<?php $ip_past = $this->db->get_where('ip_semester', [
-					'id_nilai_mahasiswa' => $key['nmid'],
-					'semester' => $cur_semester-1,
-				])->row_array(); ?>
+				<?php 
+				if ($cur_semester == 1) {
+					$ip_past = $this->db->get_where('ip_semester', [
+						'id_nilai_mahasiswa' => $key['nmid']
+					])->row_array();
+				} else {
+					$ip_past = $this->db->get_where('ip_semester', [
+						'id_nilai_mahasiswa' => $key['nmid'],
+						'semester' => $cur_semester-1,
+					])->row_array();
+				}
+				?>
 				<tr class="table-danger">
 					<th><?= $n++; ?></th>
 					<td><?= $key['nim'] ?></td>

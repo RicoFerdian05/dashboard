@@ -388,7 +388,7 @@ class Kaprodi extends CI_Controller {
 		$data['count_beasiswa'] = $this->db->count_all("beasiswa");
 
 		// Data Prestasi
-		$this->db->select("user.name AS nama, peringkat, kategori, penyelenggara, nama_kompetisi");
+		$this->db->select("user.name AS nama, peringkat, kategori, penyelenggara, nama_kompetisi, tahun");
 		$this->db->from("prestasi");
 		$this->db->join("mahasiswa", "prestasi.id_mahasiswa = mahasiswa.id");
 		$this->db->join("user", "mahasiswa.id_user = user.id");
