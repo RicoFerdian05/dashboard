@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= $title ?></title>
+    <!-- <title><?= $title ?></title> -->
+    <title>Dashboard</title>
     <link rel="shortcut icon" type="image/ico" href="<?= base_url('assets/img/logo/telyu.png') ?>" />
     <link rel="icon" type="image/ico" href="<?= base_url( 'assets/img/logo/telyu.png') ?>" />
 

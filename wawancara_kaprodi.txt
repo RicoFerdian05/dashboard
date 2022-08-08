@@ -55,3 +55,5 @@ Buku :
 6. Saran
 7. Konten ?
 
+data nilai mahasiwa, absensi, asal daerah, beasiswa, prestasi.
+

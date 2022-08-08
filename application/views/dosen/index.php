@@ -128,7 +128,7 @@
                                     <td><?= $info['tak']; ?></td>
                                     <td><?= $info['sum_sks']; ?></td>
                                     <td><?= $info['ipk']; ?></td>
-                                    <td>data invalid</td>
+                                    <td><?= $info['status_pa'] ?></td>
                                   </tr>
                                   <?php endforeach; ?>
                                 </tbody>

@@ -82,11 +82,18 @@ foreach ($menu as $m) :
 <?php endforeach ?>
     <!-- Divider -->
     <hr class="sidebar-divider mt-3">
-    
+
 <?php } endforeach ?>
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
+<?php if ($role_id == "1") {?>
+        <a class="nav-link" href="<?= base_url('admin/about') ?>">
+            <i class="fas fa-address-card"></i>
+            <span>About</span>
+        </a>
+<?php }?>
+
         <a class="nav-link" href="<?= base_url('auth/logout') ?>">
             <i class="fas fa-fw fa-sign-out-alt"></i>
             <span>Log Out</span></a>

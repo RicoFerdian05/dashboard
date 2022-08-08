@@ -46,7 +46,7 @@ class Dosen_model extends CI_Model {
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$dosen = $this->db->get_where('dosen', ['id_user' => $data['user']['id']])->row_array(); 
 
-		$this->db->select('name, ipk, tak, SUM(sks) AS sum_sks');
+		$this->db->select('name, ipk, tak, SUM(sks) AS sum_sks, status_pa');
 		$this->db->from('nilai_mata_kuliah');
 		$this->db->join('nilai_mahasiswa', 'nilai_mahasiswa.id_mahasiswa = nilai_mata_kuliah.id_nilai_mahasiswa');
 		$this->db->join('mahasiswa', 'mahasiswa.id = nilai_mahasiswa.id_mahasiswa');
