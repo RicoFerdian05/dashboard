@@ -484,6 +484,40 @@ class Admin extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
+	public function beasiswa()
+	{
+		$data['title'] = "Add New Shcolarship";
+		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['dashboard'] = $this->db->get('dashboard')->row_array();
+
+		$this->db->select("*");
+		$this->db->from("user");
+		$this->db->join("mahasiswa", "mahasiswa.id_user = user.id");
+		$this->db->where("role_id", "3");
+		$data['mahasiswa'] = $this->db->get()->result_array();
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/sidebar', $data);
+		$this->load->view('templates/topbar', $data);
+		$this->load->view('admin/tambah-beasiswa', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function tambahBeasiswa()
+	{
+		$this->db->insert('beasiswa', [
+			'tipe_beasiswa' => $this->input->post('tipe'),
+			'jenis_beasiswa' => $this->input->post('jenis'),
+			'nama_beasiswa' => $this->input->post('namaBeasiswa'),
+			'tahun' => $this->input->post('tahunBeasiswa'),
+			'id_mahasiswa' => $this->input->post('nama')
+		]);
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+				New Scholarship Added!
+				</div>');
+		redirect('Admin/');
+	}
+
 	public function about()
 	{
 		$data['title'] = "About";

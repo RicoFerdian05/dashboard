@@ -4,34 +4,45 @@
         	<!-- Page Heading -->
         	<div class="d-sm-flex align-items-center justify-content-between mb-4">
         		<h1 class="h3 mb-0 text-gray-800"><?= $title; ?></h1>
+				
         		<!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                         class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
         	</div>
 
-
+			<?= $this->session->flashdata('message'); ?>
         	<!-- Content Row -->
-        	<div class="row col-xl-12">
-        		<div class="dropdown mb-4">
-        			<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownTahunAjaran" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        				<?php if (!empty($cur_tahun_ajaran)) : ?>
-        					Tahun Ajaran <?= $cur_tahun_ajaran; ?>
-        				<?php else : ?>
-        					Periode Akademik
-        				<?php endif ?>
-        			</button>
-        			<div class="dropdown-menu" aria-labelledby="dropdownTahunAjaran">
-        				<a class="dropdown-item" href="<?= base_url('Admin/') ?>">All school years</a>
-        				<?php foreach ($tahun_ajaran as $row) : ?>
-        					<?php $tahun = str_replace('/', '_', $row['tahun_ajaran']) ?>
-        					<?php if ($this->uri->segment(3) == $tahun) : ?>
-        						<a class="dropdown-item active" href="<?= base_url('Admin/index/') . $tahun ?>"><?= $row['tahun_ajaran'] ?></a>
-        					<?php else : ?>
-        						<a class="dropdown-item" href="<?= base_url('Admin/index/') . $tahun ?>"><?= $row['tahun_ajaran'] ?></a>
-        					<?php endif ?>
-        				<?php endforeach ?>
-        			</div>
-        		</div>
-        	</div>
+			<div class="row" style="margin-right: -170px;">
+				<div class="col-xl-8">
+					<div class="dropdown mb-4">
+						<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownTahunAjaran" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<?php if (!empty($cur_tahun_ajaran)) : ?>
+								Tahun Ajaran <?= $cur_tahun_ajaran; ?>
+							<?php else : ?>
+								Periode Akademik
+							<?php endif ?>
+						</button>
+						<div class="dropdown-menu" aria-labelledby="dropdownTahunAjaran">
+							<a class="dropdown-item" href="<?= base_url('Admin/') ?>">All school years</a>
+							<?php foreach ($tahun_ajaran as $row) : ?>
+								<?php $tahun = str_replace('/', '_', $row['tahun_ajaran']) ?>
+								<?php if ($this->uri->segment(3) == $tahun) : ?>
+									<a class="dropdown-item active" href="<?= base_url('Admin/index/') . $tahun ?>"><?= $row['tahun_ajaran'] ?></a>
+								<?php else : ?>
+									<a class="dropdown-item" href="<?= base_url('Admin/index/') . $tahun ?>"><?= $row['tahun_ajaran'] ?></a>
+								<?php endif ?>
+							<?php endforeach ?>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-2" style="margin-right: -70px;">
+					<a href="<?= base_url("Admin/beasiswa") ?>" type="button" class="btn btn-success">Tambah Data Beasiswa</a>
+				</div>
+				<div class="col-xl-2" style="">
+					<a href="" type="button" class="btn btn-info">Tambah Data Prestasi</a>
+				</div>
+			</div>
+        	
 
         	<?php if ($this->uri->segment(3) != '') : ?>
         		<div class="row col-xl-12 mb-4">
