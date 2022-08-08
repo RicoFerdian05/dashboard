@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2021 at 09:53 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- Generation Time: Aug 08, 2022 at 12:07 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -44,6 +43,49 @@ INSERT INTO `agama` (`id`, `agama`) VALUES
 (4, 'Budha'),
 (5, 'Hindu'),
 (6, 'Konghucu');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `beasiswa`
+--
+
+CREATE TABLE `beasiswa` (
+  `id_beasiswa` int(11) NOT NULL,
+  `tipe_beasiswa` varchar(255) NOT NULL,
+  `jenis_beasiswa` varchar(255) NOT NULL,
+  `nama_beasiswa` varchar(255) NOT NULL,
+  `tahun` varchar(255) NOT NULL,
+  `id_mahasiswa` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `beasiswa`
+--
+
+INSERT INTO `beasiswa` (`id_beasiswa`, `tipe_beasiswa`, `jenis_beasiswa`, `nama_beasiswa`, `tahun`, `id_mahasiswa`) VALUES
+(1, 'Internal', 'Beasiswa Unggulan', 'Beasiswa JPU', '2019/2020', 1),
+(2, 'Eksternal', 'Beasiswa Bantuan', 'Anak Bangsa - Zakatel', '2020/2021', 6),
+(3, 'Internal', 'Beasiswa Anak Pegawai YPT Group', 'Beasiswa Anak Pegawai YPT', '2020/2021', 4),
+(4, 'Internal', 'Beasiswa Prestasi', 'Beasiswa Prestasi', '2020/2021', 18),
+(5, 'Eksternal', 'Beasiswa Bantuan', 'Beasiswa Pemprov JFL 2021', '2020/2021', 19),
+(6, 'Internal', 'Beasiswa OPES', 'Beasiswa SMK Telkom', '2020/2021', 20),
+(7, 'Internal', 'Beasiswa Unggulan', 'Beasiswa Aperti BUMN', '2020/2021', 22),
+(8, 'Internal', 'Beasiswa Unggulan', 'Beasiswa OSC', '2020/2021', 28),
+(9, 'Internal', 'Beasiswa Kompas', 'Beasiswa Kompas', '2020/2021', 26),
+(10, 'Internal', 'Beasiswa Prestasi', 'Beasiswa Atlet YPT', '2020/2021', 13),
+(11, 'Internal', 'Beasiswa Unggulan', 'Beasiswa JPU Pintar', '2020/2021', 3),
+(12, 'Internal', 'Beasiswa Unggulan', 'Beasiswa Tahfidz', '2020/2021', 2),
+(13, 'Internal', 'Beasiswa Kompas', 'Beasiswa Kompas', '2020/2021', 12),
+(14, 'Internal', 'Beasiswa OPES', 'Beasiswa OPES 10 Besar', '2020/2021', 16),
+(15, 'Eksternal', 'Beasiswa Bantuan', 'Beasiswa Bidik Misi', '2020/2021', 17),
+(16, 'Eksternal', 'Beasiswa Bantuan', 'Anak Bangsa - Zakatel', '2020/2021', 21),
+(17, 'Internal', 'Beasiswa Prestasi', 'Beasiswa Prestasi', '2020/2021', 25),
+(18, 'Internal', 'Beasiswa Prestasi', 'Beasiswa Prestasi', '2019/2020', 5),
+(19, 'Eksternal', 'Beasiswa Dicoding', 'Beasiswa Dicoding', '2018/2019', 4),
+(20, 'Internal', 'Beasiswa Unggulan', 'Beasiswa JPU', '2021/2022', 20),
+(21, 'Internal', 'Beasiswa Unggulan', 'Beasiswa JPU', '2021/2022', 1),
+(22, 'Internal', 'Beasiswa Unggulan', 'Beasiswa JPU', '2021/2022', 23);
 
 -- --------------------------------------------------------
 
@@ -96,6 +138,57 @@ INSERT INTO `content` (`id`, `header`, `content`, `footer`, `last_updated`) VALU
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `daerah`
+--
+
+CREATE TABLE `daerah` (
+  `kode` int(11) NOT NULL,
+  `provinsi` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `daerah`
+--
+
+INSERT INTO `daerah` (`kode`, `provinsi`) VALUES
+(11, 'Aceh'),
+(12, 'Sumatera Utara'),
+(13, 'Sumatera Barat'),
+(14, 'Riau'),
+(15, 'Jambi'),
+(16, 'Sumatera Selatan'),
+(17, 'Bengkulu'),
+(18, 'Lampung'),
+(19, 'Bangka Belitung'),
+(21, 'Kepulauan Riau'),
+(31, 'Jakarta Raya'),
+(32, 'Jawa Barat'),
+(33, 'Jawa Tengah'),
+(34, 'Yogyakarta'),
+(35, 'Jawa Timur'),
+(36, 'Banten'),
+(51, 'Bali'),
+(52, 'Nusa Tenggara Barat'),
+(53, 'Nusa Tenggara Timur'),
+(61, 'Kalimantan Barat'),
+(62, 'Kalimantan Tengah'),
+(63, 'Kalimantan Selatan'),
+(64, 'Kalimantan Timur'),
+(65, 'Kalimantan Utara'),
+(71, 'Sulawesi Utara'),
+(72, 'Sulawesi Tengah'),
+(73, 'Sulawesi Selatan'),
+(74, 'Sulawesi Tenggara'),
+(75, 'Gorontalo'),
+(76, 'Sulawesi Barat'),
+(81, 'Maluku'),
+(82, 'Maluku Utara'),
+(91, 'Papua'),
+(94, 'Papua Barat');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dashboard`
 --
 
@@ -113,7 +206,8 @@ CREATE TABLE `dashboard` (
 --
 
 INSERT INTO `dashboard` (`id`, `header`, `title`, `content`, `footer`, `icon`) VALUES
-(1, 'About Application', 'Monitoring Performa Mahasiswa', '<b>Tubes Firman</b> merupakan aplikasi yang dapat memonitoring performa mahasiswa, memiliki fitur-fitur yang sangat banyak, dan lain-lain.', 'Firman Aldo Saputra', 'fas fa-code');
+(1, 'About Application', 'Monitoring Performa Mahasiswa', '<b>Tubes Firman</b> merupakan aplikasi yang dapat memonitoring performa mahasiswa, memiliki fitur-fitur yang sangat banyak, dan lain-lain.', 'Firman Aldo Saputra', 'fas fa-code'),
+(2, 'About Application', 'Monitoring Performa Mahasiswa', '<b>Tubes Rico Ferdian & Novitriana Gadis</b> merupakan aplikasi yang dapat memonitoring performa mahasiswa, memiliki fitur-fitur yang sangat banyak, dan lain-lain.', 'Rico Ferdian & Novitriana Gadis', 'fas fa-code');
 
 -- --------------------------------------------------------
 
@@ -203,18 +297,18 @@ CREATE TABLE `ip_semester` (
 --
 
 INSERT INTO `ip_semester` (`id`, `id_nilai_mahasiswa`, `semester`, `ip`, `ipk`) VALUES
-(1, 1, 1, '3.73', '3.73'),
+(1, 1, 1, '3.76', '3.76'),
 (2, 1, 2, '3.50', '3.61'),
 (3, 1, 3, '3.50', '3.57'),
 (4, 1, 4, '3.34', '3.51'),
 (5, 1, 5, '2.79', '3.42'),
 (6, 1, 6, '3.38', '3.41'),
-(7, 2, 1, '0.00', '0.00'),
-(8, 2, 2, '0.00', '0.00'),
-(9, 2, 3, '0.00', '0.00'),
-(10, 2, 4, '0.00', '0.00'),
-(11, 2, 5, '0.00', '0.00'),
-(12, 2, 6, '0.00', '0.00'),
+(7, 2, 1, '3.91', '3.91'),
+(8, 2, 2, '3.48', '3.86'),
+(9, 2, 3, '3.48', '3.86'),
+(10, 2, 4, '3.48', '3.86'),
+(11, 2, 5, '3.48', '3.86'),
+(12, 2, 6, '3.48', '3.86'),
 (13, 3, 1, '3.25', '3.25'),
 (14, 3, 2, '3.05', '3.15'),
 (15, 3, 3, '3.55', '3.29'),
@@ -222,29 +316,29 @@ INSERT INTO `ip_semester` (`id`, `id_nilai_mahasiswa`, `semester`, `ip`, `ipk`) 
 (17, 3, 5, '3.21', '3.23'),
 (18, 3, 6, '3.38', '3.25'),
 (19, 4, 1, '3.50', '3.50'),
-(20, 4, 2, '0.00', '3.50'),
-(21, 4, 3, '0.00', '3.50'),
+(20, 4, 2, '3.48', '3.50'),
+(21, 4, 3, '3.48', '3.50'),
 (22, 4, 4, '3.28', '3.30'),
 (23, 4, 5, '3.79', '3.45'),
 (24, 4, 6, '4.00', '3.61'),
-(25, 5, 1, '0.00', '0.00'),
-(26, 5, 2, '0.00', '0.00'),
-(27, 5, 3, '0.00', '0.00'),
-(28, 5, 4, '0.00', '0.00'),
-(29, 5, 5, '0.00', '0.00'),
-(30, 5, 6, '0.00', '0.00'),
+(25, 5, 1, '3.48', '0.00'),
+(26, 5, 2, '3.48', '0.00'),
+(27, 5, 3, '3.48', '0.00'),
+(28, 5, 4, '3.48', '0.00'),
+(29, 5, 5, '3.48', '0.00'),
+(30, 5, 6, '3.48', '0.00'),
 (31, 6, 1, '3.00', '3.00'),
 (32, 6, 2, '3.03', '3.01'),
 (33, 6, 3, '3.74', '3.26'),
 (34, 6, 4, '3.75', '3.39'),
 (35, 6, 5, '2.54', '3.28'),
 (36, 6, 6, '3.88', '3.37'),
-(37, 7, 1, '0.00', '0.00'),
-(38, 7, 2, '0.00', '0.00'),
-(39, 7, 3, '0.00', '0.00'),
-(40, 7, 4, '0.00', '0.00'),
-(41, 7, 5, '0.00', '0.00'),
-(42, 7, 6, '0.00', '0.00'),
+(37, 7, 1, '3.48', '0.00'),
+(38, 7, 2, '3.48', '0.00'),
+(39, 7, 3, '3.48', '0.00'),
+(40, 7, 4, '3.48', '0.00'),
+(41, 7, 5, '3.48', '0.00'),
+(42, 7, 6, '3.48', '0.00'),
 (43, 8, 1, '2.83', '2.83'),
 (44, 8, 2, '2.95', '2.89'),
 (45, 8, 3, '2.90', '2.89'),
@@ -257,24 +351,24 @@ INSERT INTO `ip_semester` (`id`, `id_nilai_mahasiswa`, `semester`, `ip`, `ipk`) 
 (52, 9, 4, '3.34', '3.42'),
 (53, 9, 5, '3.71', '3.45'),
 (54, 9, 6, '3.88', '3.51'),
-(55, 10, 1, '0.00', '0.00'),
-(56, 10, 2, '0.00', '0.00'),
-(57, 10, 3, '0.00', '0.00'),
-(58, 10, 4, '0.00', '0.00'),
-(59, 10, 5, '0.00', '0.00'),
-(60, 10, 6, '0.00', '0.00'),
-(61, 11, 1, '0.00', '0.00'),
-(62, 11, 2, '0.00', '0.00'),
-(63, 11, 3, '0.00', '0.00'),
-(64, 11, 4, '0.00', '0.00'),
-(65, 11, 5, '0.00', '0.00'),
-(66, 11, 6, '0.00', '0.00'),
+(55, 10, 1, '3.48', '0.00'),
+(56, 10, 2, '3.48', '0.00'),
+(57, 10, 3, '3.48', '0.00'),
+(58, 10, 4, '3.48', '0.00'),
+(59, 10, 5, '3.48', '0.00'),
+(60, 10, 6, '3.48', '0.00'),
+(61, 11, 1, '3.48', '0.00'),
+(62, 11, 2, '3.48', '0.00'),
+(63, 11, 3, '3.48', '0.00'),
+(64, 11, 4, '3.48', '0.00'),
+(65, 11, 5, '3.48', '0.00'),
+(66, 11, 6, '3.48', '0.00'),
 (67, 12, 1, '3.00', '3.00'),
 (68, 12, 2, '3.82', '3.72'),
 (69, 12, 3, '3.61', '3.67'),
-(70, 12, 4, '0.00', '3.67'),
-(71, 12, 5, '0.00', '3.67'),
-(72, 12, 6, '0.00', '3.67'),
+(70, 12, 4, '3.48', '3.67'),
+(71, 12, 5, '3.48', '3.67'),
+(72, 12, 6, '3.48', '3.67'),
 (73, 13, 1, '3.50', '3.50'),
 (74, 13, 2, '3.45', '3.48'),
 (75, 13, 3, '3.55', '3.50'),
@@ -287,18 +381,18 @@ INSERT INTO `ip_semester` (`id`, `id_nilai_mahasiswa`, `semester`, `ip`, `ipk`) 
 (82, 14, 4, '3.45', '3.52'),
 (83, 14, 5, '3.92', '3.57'),
 (84, 14, 6, '4.00', '3.63'),
-(85, 15, 1, '0.00', '0.00'),
-(86, 15, 2, '0.00', '0.00'),
-(87, 15, 3, '0.00', '0.00'),
-(88, 15, 4, '0.00', '0.00'),
-(89, 15, 5, '0.00', '0.00'),
-(90, 15, 6, '0.00', '0.00'),
-(91, 16, 1, '0.00', '0.00'),
-(92, 16, 2, '0.00', '0.00'),
-(93, 16, 3, '0.00', '0.00'),
-(94, 16, 4, '0.00', '0.00'),
-(95, 16, 5, '0.00', '0.00'),
-(96, 16, 6, '0.00', '0.00'),
+(85, 15, 1, '3.48', '0.00'),
+(86, 15, 2, '3.48', '0.00'),
+(87, 15, 3, '3.48', '0.00'),
+(88, 15, 4, '3.48', '0.00'),
+(89, 15, 5, '3.48', '0.00'),
+(90, 15, 6, '3.48', '0.00'),
+(91, 16, 1, '3.48', '0.00'),
+(92, 16, 2, '3.48', '0.00'),
+(93, 16, 3, '3.48', '0.00'),
+(94, 16, 4, '3.48', '0.00'),
+(95, 16, 5, '3.48', '0.00'),
+(96, 16, 6, '3.48', '0.00'),
 (97, 17, 1, '3.23', '3.23'),
 (98, 17, 2, '3.38', '3.30'),
 (99, 17, 3, '3.24', '3.28'),
@@ -370,13 +464,13 @@ INSERT INTO `ip_semester` (`id`, `id_nilai_mahasiswa`, `semester`, `ip`, `ipk`) 
 (165, 28, 3, '4.00', '3.56'),
 (166, 28, 4, '3.50', '3.55'),
 (167, 28, 5, '4.00', '3.67'),
-(168, 28, 6, '0.00', '0.00'),
-(169, 29, 1, '0.00', '0.00'),
-(170, 29, 2, '0.00', '0.00'),
-(171, 29, 3, '0.00', '0.00'),
-(172, 29, 4, '0.00', '0.00'),
-(173, 29, 5, '0.00', '0.00'),
-(174, 29, 6, '0.00', '0.00');
+(168, 28, 6, '3.48', '0.00'),
+(169, 29, 1, '3.48', '0.00'),
+(170, 29, 2, '3.48', '0.00'),
+(171, 29, 3, '3.48', '0.00'),
+(172, 29, 4, '3.48', '0.00'),
+(173, 29, 5, '3.48', '0.00'),
+(174, 29, 6, '3.48', '0.00');
 
 -- --------------------------------------------------------
 
@@ -428,6 +522,33 @@ INSERT INTO `kelas` (`id`, `kelas`, `semester_kelas`, `nama_ketua_kelas`, `nomor
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kelompok_pekerjaan`
+--
+
+CREATE TABLE `kelompok_pekerjaan` (
+  `id_kerja` int(11) NOT NULL,
+  `jenis_pekerjaan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kelompok_pekerjaan`
+--
+
+INSERT INTO `kelompok_pekerjaan` (`id_kerja`, `jenis_pekerjaan`) VALUES
+(1, 'Pekerjaan Lembaga Legislatif, Pejabat Tinggi, dan Manager'),
+(2, 'Tenaga Profesional'),
+(3, 'Teknisi dan Asisten Tenaga Profesional'),
+(4, 'Tenaga Tata Usaha'),
+(5, 'Tenaga Usaha Jasa dan Usaha Penjualan di Toko dan Pasar'),
+(6, 'Tenaga Usaha Pertanian dan Peternakan'),
+(7, 'Tenaga Pengolahan dan Kerajinan Ybdi'),
+(8, 'Operator dan Perakit Mesin'),
+(9, 'Pekerjaan Kasar, Tenaga Kebersihan, dan Tenaga Ybdi'),
+(10, 'Anggota TNI dan Kepolisian Negara RI');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `mahasiswa`
 --
 
@@ -439,38 +560,41 @@ CREATE TABLE `mahasiswa` (
   `angkatan` int(11) DEFAULT NULL,
   `nama_wali` varchar(255) NOT NULL,
   `pekerjaan_wali` varchar(255) NOT NULL,
+  `kelompok_pekerjaan` int(11) NOT NULL,
   `pendidikan_wali` int(11) NOT NULL,
+  `kode_prov` int(11) NOT NULL,
   `asal_daerah` varchar(255) NOT NULL,
-  `id_status` int(11) NOT NULL
+  `id_status` int(11) NOT NULL,
+  `status_pa` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`id`, `id_user`, `nim`, `id_kelas`, `angkatan`, `nama_wali`, `pekerjaan_wali`, `pendidikan_wali`, `asal_daerah`, `id_status`) VALUES
-(1, 2, '6701144091', 6, 38, 'Paurenta', 'Wiraswasta', 7, 'Sumatera Utara', 2),
-(2, 3, '6701144000', 6, 38, 'Hartono', 'Nelayan', 9, 'Aceh', 2),
-(3, 6, '6701130123', 1, 37, 'Mulyanto', 'Karyawan', 4, 'DKI Jakarta', 2),
-(4, 14, '6701140055', 6, 38, 'Rizqi', 'Wiraswasta', 9, 'Riau', 2),
-(5, 1, '6701140077', 6, 38, 'Fahruroji', 'Wiraswasta', 5, 'Jawa Barat', 2),
-(6, 16, '6701133048', 2, 37, 'Dodi', 'Wiraswasta', 6, 'Jawa Tengah', 2),
-(9, 13, '6701140186', 6, 38, 'Martinus', 'Nelayan', 2, 'Jambi', 2),
-(12, 39, '6701184002', 19, 42, 'Hartono', 'PNS', 7, 'Sumatera Selatan', 1),
-(13, 38, '6701184012', 19, 42, 'Syafri Aziz', 'Wiraswasta', 3, 'Sumatera Barat', 1),
-(16, 46, '6701184044', 19, 42, 'Bima Arya Sihotang', 'PNS', 8, 'Kepulauan Riau', 1),
-(17, 47, '6701183048', 19, 42, 'Muhammad Alif', 'PNS', 8, 'Jawa Timur', 1),
-(18, 48, '6701184006', 19, 42, 'Aldi Saputra', 'Wiraswasta', 4, 'Sumatera Barat', 1),
-(19, 49, '6701180155', 19, 42, 'Halil Adhi', 'Polisi', 4, 'Jawa Timur', 1),
-(20, 50, '6701180113', 19, 42, 'Abdul Ghofur', 'Arsitek', 8, 'Jawa Timur', 1),
-(21, 51, '6701180019', 19, 42, 'Rafi ahmad', 'Tentara', 8, 'Banten', 1),
-(22, 113, '6701184062', 19, 42, 'Asraf hidayanto', 'Arsitek', 8, 'Sulawesi Selatan', 1),
-(23, 114, '6701180123', 19, 42, 'Fakhrul Rozi', 'Wiraswasta', 9, 'Jawa Barat', 1),
-(24, 115, '6701180058', 19, 42, 'Abdul alfi', 'Pemadam Kebakaran', 4, 'Banten', 1),
-(25, 116, '6701184118', 19, 42, 'Vinno adhi', 'Peternak', 4, 'Riau', 1),
-(26, 117, '6701184083', 19, 42, 'Muhammad syaifullah', 'Pilot', 7, 'Jawa Barat', 1),
-(27, 118, '6701194013', 25, 43, 'Muhammad Doni', 'PNS', 7, 'Sumatera Barat', 1),
-(28, 119, '6701184071', 19, 42, 'Boby simanjuntak', 'Tentara', 7, 'Sumatera Utara', 1);
+INSERT INTO `mahasiswa` (`id`, `id_user`, `nim`, `id_kelas`, `angkatan`, `nama_wali`, `pekerjaan_wali`, `kelompok_pekerjaan`, `pendidikan_wali`, `kode_prov`, `asal_daerah`, `id_status`, `status_pa`) VALUES
+(1, 2, '6701144091', 6, 38, 'Paurenta', 'Wiraswasta', 5, 7, 12, 'Sumatera Utara', 2, 'Done'),
+(2, 3, '6701144000', 6, 38, 'Hartono', 'Nelayan', 6, 9, 11, 'Aceh', 2, 'Done'),
+(3, 6, '6701130123', 1, 37, 'Mulyanto', 'Karyawan', 8, 4, 31, 'DKI Jakarta', 2, 'Done'),
+(4, 14, '6701140055', 6, 38, 'Rizqi', 'Wiraswasta', 5, 9, 14, 'Riau', 2, 'Done'),
+(5, 1, '6701140077', 6, 38, 'Fahruroji', 'Wiraswasta', 5, 5, 32, 'Jawa Barat', 2, 'Done'),
+(6, 16, '6701133048', 2, 37, 'Dodi', 'Wiraswasta', 5, 6, 33, 'Jawa Tengah', 2, 'Done'),
+(9, 13, '6701140186', 6, 38, 'Martinus', 'Nelayan', 6, 2, 15, 'Jambi', 2, 'Done'),
+(12, 39, '6701184002', 19, 42, 'Hartono', 'PNS', 1, 7, 16, 'Sumatera Selatan', 1, 'On Going'),
+(13, 38, '6701184012', 19, 42, 'Syafri Aziz', 'Wiraswasta', 5, 3, 13, 'Sumatera Barat', 1, 'On Going'),
+(16, 46, '6701184044', 19, 42, 'Bima Arya Sihotang', 'PNS', 1, 8, 21, 'Kepulauan Riau', 1, 'On Going'),
+(17, 47, '6701183048', 19, 42, 'Muhammad Alif', 'PNS', 1, 8, 35, 'Jawa Timur', 1, 'On Going'),
+(18, 48, '6701184006', 19, 42, 'Aldi Saputra', 'Wiraswasta', 5, 4, 13, 'Sumatera Barat', 1, 'On Going'),
+(19, 49, '6701180155', 19, 42, 'Halil Adhi', 'Polisi', 10, 4, 35, 'Jawa Timur', 1, 'On Going'),
+(20, 50, '6701180113', 19, 42, 'Abdul Ghofur', 'Arsitek', 2, 8, 35, 'Jawa Timur', 1, 'On Going'),
+(21, 51, '6701180019', 19, 42, 'Rafi ahmad', 'Tentara', 10, 8, 36, 'Banten', 1, 'On Going'),
+(22, 113, '6701184062', 19, 42, 'Asraf hidayanto', 'Arsitek', 2, 8, 73, 'Sulawesi Selatan', 1, 'On Going'),
+(23, 114, '6701180123', 19, 42, 'Fakhrul Rozi', 'Wiraswasta', 5, 9, 32, 'Jawa Barat', 1, 'On Going'),
+(24, 115, '6701180058', 19, 42, 'Abdul alfi', 'Pemadam Kebakaran', 5, 4, 36, 'Banten', 1, 'On Going'),
+(25, 116, '6701184118', 19, 42, 'Vinno adhi', 'Peternak', 6, 4, 14, 'Riau', 1, 'On Going'),
+(26, 117, '6701184083', 19, 42, 'Muhammad syaifullah', 'Pilot', 3, 7, 32, 'Jawa Barat', 1, 'On Going'),
+(27, 118, '6701194013', 25, 43, 'Muhammad Doni', 'PNS', 1, 7, 13, 'Sumatera Barat', 1, 'On Going'),
+(28, 119, '6701184071', 19, 42, 'Boby simanjuntak', 'Tentara', 10, 7, 12, 'Sumatera Utara', 1, 'On Going');
 
 -- --------------------------------------------------------
 
@@ -550,32 +674,32 @@ CREATE TABLE `nilai_mahasiswa` (
 --
 
 INSERT INTO `nilai_mahasiswa` (`id`, `id_mahasiswa`, `ipk`, `tak`) VALUES
-(1, 1, '3.41', 307),
-(2, 3, '0.00', 367),
+(1, 1, '3.67', 307),
+(2, 3, '3.91', 367),
 (3, 4, '3.25', 56),
-(4, 6, '3.61', 0),
-(5, 7, '4.00', 0),
+(4, 6, '3.61', 20),
+(5, 7, '4.00', 12),
 (6, 5, '3.37', 50),
-(7, 8, '3.67', 0),
+(7, 8, '3.67', 24),
 (8, 9, '2.88', 100),
 (9, 2, '3.51', 150),
-(11, 10, '0.00', 0),
+(11, 10, '3.40', 47),
 (12, 11, '3.67', 10),
 (13, 12, '3.46', 10),
 (14, 13, '3.62', 35),
-(15, 14, '0.00', 0),
-(16, 15, '4.00', 0),
-(17, 16, '3.27', 0),
-(18, 17, '3.40', 0),
-(19, 18, '3.06', 0),
-(20, 19, '2.98', 0),
-(21, 20, '3.17', 0),
-(22, 21, '3.38', 0),
-(23, 22, '3.29', 0),
-(24, 23, '3.79', 0),
-(25, 24, '3.38', 0),
-(26, 25, '3.29', 0),
-(27, 26, '3.71', 0),
+(15, 14, '3.40', 13),
+(16, 15, '4.00', 30),
+(17, 16, '3.27', 56),
+(18, 17, '3.40', 12),
+(19, 18, '3.06', 38),
+(20, 19, '2.98', 36),
+(21, 20, '3.17', 56),
+(22, 21, '3.38', 40),
+(23, 22, '3.29', 34),
+(24, 23, '3.79', 64),
+(25, 24, '3.38', 32),
+(26, 25, '3.29', 74),
+(27, 26, '3.71', 90),
 (28, 27, '3.65', 20),
 (29, 28, '0.00', 15);
 
@@ -1316,7 +1440,9 @@ INSERT INTO `nilai_mata_kuliah` (`id`, `indeks`, `presensi`, `tahun_ajaran`, `se
 (732, 'A', '0.88', '2020/2021', 5, 27, 38),
 (733, 'A', '0.94', '2020/2021', 5, 27, 39),
 (734, 'A', '1.00', '2021/2022', 6, 27, 40),
-(735, 'A', '1.00', '2021/2022', 6, 27, 41);
+(735, 'A', '1.00', '2021/2022', 6, 27, 41),
+(737, 'A', '0.33', '2013/2014', 1, 2, 3),
+(738, 'A', '0.50', '2013/2014', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1467,6 +1593,46 @@ INSERT INTO `pertanyaan_keamanan` (`id`, `id_user`, `id_pertanyaan_1`, `jawaban_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `prestasi`
+--
+
+CREATE TABLE `prestasi` (
+  `id_prestasi` int(11) NOT NULL,
+  `peringkat` varchar(255) NOT NULL,
+  `kategori` varchar(255) NOT NULL,
+  `penyelenggara` varchar(255) NOT NULL,
+  `nama_kompetisi` varchar(255) NOT NULL,
+  `tahun` varchar(255) NOT NULL,
+  `id_mahasiswa` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `prestasi`
+--
+
+INSERT INTO `prestasi` (`id_prestasi`, `peringkat`, `kategori`, `penyelenggara`, `nama_kompetisi`, `tahun`, `id_mahasiswa`) VALUES
+(1, 'Juara 3', 'Kelompok', 'PUSPRESNAS', 'Belmawa Gemastik 2021', '2021', '26'),
+(2, 'Juara 3', 'Kelompok', 'PUSPRESNAS', 'Belmawa Gemastik 2021', '2021', '23'),
+(3, 'Juara 2', 'Kelompok', 'Universitas Negeri Yogyakarta', 'Business Plan', '2021', '20'),
+(4, 'Juara 2', 'Kelompok', 'Universitas Negeri Yogyakarta', 'Business Plan', '2021', '26'),
+(5, 'Juara Harapan', 'Kelompok', 'Huawei', 'Huawei ICT Competition 2021', '2021', '13'),
+(6, 'Juara Harapan', 'Kelompok', 'Huawei', 'Huawei ICT COmpetition 2021', '2021', '3'),
+(7, 'Juara 1', 'Individu', 'Student English Society', 'NUDC Telkom Selection 2020', '2021', '18'),
+(8, 'Juara Harapan', 'Kelompok', 'Telkom Indonesia', 'INNOVILLAGE 2021', '2021', '17'),
+(9, 'Juara Harapan', 'Kelompok', 'Telkom Indonesia', 'INNOVILLAGE 2021', '2021', '19'),
+(10, 'Juara Harapan', 'Kelompok', 'Telkom Indonesia', 'INNOVILLAGE 2021', '2021', '4'),
+(11, 'Juara 3', 'Kelompok', 'IDStar & ONE Indonesia', 'ICStar Hackaton', '2021', '2'),
+(12, 'Juara 3', 'Kelompok', 'IDStar & ONE Indonesia', 'ICStar Hackaton', '2021', '25'),
+(13, 'Juara 3', 'Kelompok', 'IDStar & ONE Indonesia', 'ICStar Hackaton', '2021', '26'),
+(14, 'Partisipan', 'Kelompok', 'Telkom University', 'Datathon AI', '2021', '27'),
+(15, 'Partisipan', 'Kelompok', 'Telkom University', 'Datathon AI', '2021', '22'),
+(16, 'Juara 3', 'Individu', 'Telkom University', 'Entrepeneur of Infomation System', '2021', '16'),
+(17, 'Juara 1', 'Individu', 'PUSPRESNAS', 'Belmawa Gemastik 2022', '2021', '26'),
+(18, 'Juara 1', 'Individu', 'PUSPRESNAS', 'Belmawa Gemastik 2022', '2022', '25');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `prodi`
 --
 
@@ -1592,7 +1758,9 @@ INSERT INTO `sub_nilai_mata_kuliah` (`id`, `nama_penilaian`, `bobot`, `nilai`, `
 (48, 'Assesment I', '0.30', '75.00', '405'),
 (49, 'Assesment II', '0.25', '90.00', '405'),
 (50, 'Assesment III', '0.25', '90.00', '405'),
-(51, 'Tugas dan Praktikum', '0.20', '89.58', '405');
+(51, 'Tugas dan Praktikum', '0.20', '89.58', '405'),
+(52, 'Pemrograman Dasar', '1.00', '100.00', '736'),
+(53, 'Pemrograman Dasar', '1.00', '100.00', '737');
 
 -- --------------------------------------------------------
 
@@ -1983,6 +2151,12 @@ ALTER TABLE `agama`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `beasiswa`
+--
+ALTER TABLE `beasiswa`
+  ADD PRIMARY KEY (`id_beasiswa`);
+
+--
 -- Indexes for table `catatan`
 --
 ALTER TABLE `catatan`
@@ -1993,6 +2167,12 @@ ALTER TABLE `catatan`
 --
 ALTER TABLE `content`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `daerah`
+--
+ALTER TABLE `daerah`
+  ADD PRIMARY KEY (`kode`);
 
 --
 -- Indexes for table `dashboard`
@@ -2023,6 +2203,12 @@ ALTER TABLE `ip_semester`
 --
 ALTER TABLE `kelas`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `kelompok_pekerjaan`
+--
+ALTER TABLE `kelompok_pekerjaan`
+  ADD PRIMARY KEY (`id_kerja`);
 
 --
 -- Indexes for table `mahasiswa`
@@ -2077,6 +2263,12 @@ ALTER TABLE `pertanyaan_2`
 --
 ALTER TABLE `pertanyaan_keamanan`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `prestasi`
+--
+ALTER TABLE `prestasi`
+  ADD PRIMARY KEY (`id_prestasi`);
 
 --
 -- Indexes for table `prodi`
@@ -2156,6 +2348,12 @@ ALTER TABLE `agama`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `beasiswa`
+--
+ALTER TABLE `beasiswa`
+  MODIFY `id_beasiswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
 -- AUTO_INCREMENT for table `catatan`
 --
 ALTER TABLE `catatan`
@@ -2171,7 +2369,7 @@ ALTER TABLE `content`
 -- AUTO_INCREMENT for table `dashboard`
 --
 ALTER TABLE `dashboard`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `dosen`
@@ -2198,6 +2396,12 @@ ALTER TABLE `kelas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
+-- AUTO_INCREMENT for table `kelompok_pekerjaan`
+--
+ALTER TABLE `kelompok_pekerjaan`
+  MODIFY `id_kerja` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
@@ -2219,7 +2423,7 @@ ALTER TABLE `nilai_mahasiswa`
 -- AUTO_INCREMENT for table `nilai_mata_kuliah`
 --
 ALTER TABLE `nilai_mata_kuliah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=736;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=739;
 
 --
 -- AUTO_INCREMENT for table `pendidikan`
@@ -2252,6 +2456,12 @@ ALTER TABLE `pertanyaan_keamanan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `prestasi`
+--
+ALTER TABLE `prestasi`
+  MODIFY `id_prestasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
 -- AUTO_INCREMENT for table `prodi`
 --
 ALTER TABLE `prodi`
@@ -2267,7 +2477,7 @@ ALTER TABLE `status_mahasiswa`
 -- AUTO_INCREMENT for table `sub_nilai_mata_kuliah`
 --
 ALTER TABLE `sub_nilai_mata_kuliah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `tahun_ajaran`
