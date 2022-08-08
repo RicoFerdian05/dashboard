@@ -192,7 +192,7 @@
                                   <tr>
                                     <td><?= $x++; ?></td>
                                     <td><?= $p['name']; ?></td>
-                                    <td><?= $p['avg_presensi']." %";?></td>
+                                    <td><?= ($p['avg_presensi']*100)." %";?></td>
                                   </tr>
                                   <?php endforeach; ?>
                                 </tbody>

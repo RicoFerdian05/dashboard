@@ -194,16 +194,16 @@
                 $('#newMenuModalLabel').html('Add New Menu');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/menu');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/menu');
             });
 
             $('.updateMenuModalButton').on('click', function() {
                 $('#newMenuModalLabel').html('Edit Menu');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/menu/updateMenu');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/menu/updateMenu');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/menu/getUpdateMenu',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/menu/getUpdateMenu',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -227,16 +227,16 @@
                 $('#newRoleModalLabel').html('Add New Role');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Admin/role/');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Admin/role/');
             });
 
             $('.updateRoleModalButton').on('click', function() {
                 $('#newRoleModalLabel').html('Edit Role');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Admin/updateRole');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Admin/updateRole');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/admin/getUpdateRole',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/admin/getUpdateRole',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -255,7 +255,7 @@
                 $('.modal-footer button[type=submit]').html('Save');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/admin/getUserData',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/admin/getUserData',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -274,16 +274,16 @@
                 $('#newSubMenuModalLabel').html('Add New SubMenu');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/menu/subMenu');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/menu/subMenu');
             });
 
             $('.updateSubMenuModalButton').on('click', function() {
                 $('#newSubMenuModalLabel').html('Edit SubMenu');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/menu/updateSubMenu');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/menu/updateSubMenu');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/menu/getUpdateSubMenu',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/menu/getUpdateSubMenu',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -310,16 +310,16 @@
                 $('#newAgamaModalLabel').html('Add New Religion');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/agama');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/agama');
             });
 
             $('.updateAgamaModalButton').on('click', function() {
                 $('#newAgamaModalLabel').html('Edit Religion');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/updateAgama');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateAgama');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/DataMaster/getUpdateAgama',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/getUpdateAgama',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -337,16 +337,16 @@
                 $('#newPendidikanModalLabel').html('Add New Education');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/pendidikan');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/pendidikan');
             });
 
             $('.updatePendidikanModalButton').on('click', function() {
                 $('#newPendidikanModalLabel').html('Edit Education');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/updatePendidikan');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updatePendidikan');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/DataMaster/getUpdatePendidikan',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/getUpdatePendidikan',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -364,16 +364,16 @@
                 $('#newPertanyaan1ModalLabel').html('Add New Question 1');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/pertanyaan/1');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/pertanyaan/1');
             });
 
             $('.updatePertanyaan1ModalButton').on('click', function() {
                 $('#newPertanyaan1ModalLabel').html('Edit Question 1');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/updatePertanyaan/1');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updatePertanyaan/1');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/DataMaster/getUpdatePertanyaan1',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/getUpdatePertanyaan1',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -391,16 +391,16 @@
                 $('#newPertanyaan2ModalLabel').html('Add New Question 2');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/pertanyaan/2');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/pertanyaan/2');
             });
 
             $('.updatePertanyaan2ModalButton').on('click', function() {
                 $('#newPertanyaan2ModalLabel').html('Edit Question 2');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/updatePertanyaan/2');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updatePertanyaan/2');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/DataMaster/getUpdatePertanyaan2',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/getUpdatePertanyaan2',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -418,16 +418,16 @@
                 $('#newKontenModalLabel').html('Add New Content');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/konten');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/konten');
             });
 
             $('.updateKontenModalButton').on('click', function() {
                 $('#newKontenModalLabel').html('Edit Content');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/updateKonten');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateKonten');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/DataMaster/getUpdateKonten',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/getUpdateKonten',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -447,16 +447,16 @@
                 $('#newTahunAjaranModalLabel').html('Add New School Year');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/tahunAjaran');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/tahunAjaran');
             });
 
             $('.updateTahunAjaranModalButton').on('click', function() {
                 $('#newTahunAjaranModalLabel').html('Edit School Year');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/updateTahunAjaran');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateTahunAjaran');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/DataMaster/getUpdateTahunAjaran',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/getUpdateTahunAjaran',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -474,16 +474,16 @@
                 $('#newStatusMahasiswaModalLabel').html("Add New Student's Status");
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/statusMahasiswa');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/statusMahasiswa');
             });
 
             $('.updateStatusMahasiswaModalButton').on('click', function() {
                 $('#newStatusMahasiswaModalLabel').html("Edit Student's Status");
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/updateStatusMahasiswa');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateStatusMahasiswa');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/DataMaster/getUpdateStatusMahasiswa',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/getUpdateStatusMahasiswa',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -501,16 +501,16 @@
                 $('#newFakultasModalLabel').html('Add New Faculty');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/fakultas');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/fakultas');
             });
 
             $('.updateFakultasModalButton').on('click', function() {
                 $('#newFakultasModalLabel').html('Edit Faculty');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/updateFakultas');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateFakultas');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/DataMaster/getUpdateFakultas',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/getUpdateFakultas',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -529,16 +529,16 @@
                 $('#newProdiModalLabel').html('Add New Prodi');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/prodi');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/prodi');
             });
 
             $('.updateProdiModalButton').on('click', function() {
                 $('#newProdiModalLabel').html('Edit Prodi');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/updateProdi');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateProdi');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/DataMaster/getUpdateProdi',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/getUpdateProdi',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -559,16 +559,16 @@
                 $('#newKelasModalLabel').html('Add New Class');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/kelas');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/kelas');
             });
 
             $('.updateKelasModalButton').on('click', function() {
                 $('#newKelasModalLabel').html('Edit Class');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/updateKelas');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateKelas');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/DataMaster/getUpdateKelas',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/getUpdateKelas',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -591,16 +591,16 @@
                 $('#newMataKuliahModalLabel').html('Add New Course');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/mataKuliah');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/mataKuliah');
             });
 
             $('.updateMataKuliahModalButton').on('click', function() {
                 $('#newMataKuliahModalLabel').html('Edit Course');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/DataMaster/updateMataKuliah');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateMataKuliah');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/DataMaster/getUpdateMataKuliah',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/getUpdateMataKuliah',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -622,16 +622,16 @@
                 $('#newPengampuModalLabel').html('Add New Lecturer');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Kaprodi/Pengampu');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Kaprodi/Pengampu');
             });
 
             $('.updatePengampuModalButton').on('click', function() {
                 $('#newPengampuModalLabel').html('Edit Lecturer');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Kaprodi/updatePengampu');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Kaprodi/updatePengampu');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/Kaprodi/getUpdatePengampu',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/Kaprodi/getUpdatePengampu',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -650,16 +650,16 @@
                 $('#newNilaiMahasiswaModalLabel').html('Add New Student Score');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Dosen/NilaiMahasiswa');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/NilaiMahasiswa');
             });
 
             $('.updateNilaiMahasiswaModalButton').on('click', function() {
                 $('#newNilaiMahasiswaModalLabel').html('Edit Student Score');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Dosen/updateNilaiMahasiswa');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/updateNilaiMahasiswa');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/Dosen/getUpdateNilaiMahasiswa',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/getUpdateNilaiMahasiswa',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -679,16 +679,16 @@
                 $('#newNilaiMataKuliahModalLabel').html('Add New Student Score');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Dosen/nilaiMataKuliah');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/nilaiMataKuliah');
             });
 
             $('.updateNilaiMataKuliahModalButton').on('click', function() {
                 $('#newNilaiMataKuliahModalLabel').html('Edit Student Score');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Dosen/updateNilaiMataKuliah');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/updateNilaiMataKuliah');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/Dosen/getUpdateNilaiMataKuliah',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/getUpdateNilaiMataKuliah',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -711,16 +711,16 @@
                 $('#newDetailSubNilaiMataKuliahModalLabel').html('Add New Student Score');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Dosen/DetailSubnilaiMataKuliah/<?= $this->uri->segment(3); ?>');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/DetailSubnilaiMataKuliah/<?= $this->uri->segment(3); ?>');
             });
 
             $('.updateDetailSubNilaiMataKuliahModalButton').on('click', function() {
                 $('#newDetailSubNilaiMataKuliahModalLabel').html('Edit Student Score');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Dosen/updateSubNilaiMataKuliah/<?= $this->uri->segment(3); ?>/detail');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/updateSubNilaiMataKuliah/<?= $this->uri->segment(3); ?>/detail');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/Dosen/getUpdateSubNilaiMataKuliah',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/getUpdateSubNilaiMataKuliah',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -741,7 +741,7 @@
                 $('#newSubNilaiMataKuliahModalLabel').html('Add New Student Score');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Dosen/SubnilaiMataKuliah');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/SubnilaiMataKuliah');
                 $('#id_nilai_mata_kuliah').hide();
                 $('#id_pengampu').show();
                 $('#id_nilai_mahasiswa').show();
@@ -750,13 +750,13 @@
             $('.updateSubNilaiMataKuliahModalButton').on('click', function() {
                 $('#newSubNilaiMataKuliahModalLabel').html('Edit Student Score');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Dosen/updateSubNilaiMataKuliah/data');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/updateSubNilaiMataKuliah/data');
                 $('#id_nilai_mata_kuliah').show();
                 $('#id_pengampu').hide();
                 $('#id_nilai_mahasiswa').hide();
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/Dosen/getUpdateSubNilaiMataKuliah',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/Dosen/getUpdateSubNilaiMataKuliah',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
@@ -776,16 +776,16 @@
                 $('#newTakModalLabel').html('Add New TAK');
                 $('.modal-footer button[type=submit]').html('Add');
                 $('.modal-content form')[0].reset();
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Mahasiswa/tak');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Mahasiswa/tak');
             });
 
             $('.updateTakModalButton').on('click', function() {
                 $('#newTakModalLabel').html('Edit TAK');
                 $('.modal-footer button[type=submit]').html('Save');
-                $('.modal-content form').attr('action', 'http://localhost/presensi/Mahasiswa/updateTak');
+                $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/Mahasiswa/updateTak');
                 const id = $(this).data('id');
                 jQuery.ajax({
-                    url: 'http://localhost/presensi/Mahasiswa/getUpdateTak',
+                    url: 'http://localhost/PROYEK_AKHIR/dashboard/Mahasiswa/getUpdateTak',
                     data: {id : id},
                     method: 'post',
                     dataType: 'json',
