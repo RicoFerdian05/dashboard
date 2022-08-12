@@ -1964,7 +1964,7 @@ class Dosen extends CI_Controller {
 		$this->db->where('id_nilai_mata_kuliah', $id_nilai_mata_kuliah);
 		$nilai_sub_mata_kuliah = $this->db->get()->result_array();
 		$hasil = 0;
-		$id_nilai_mahasiswa = 0;
+		$id_nilai_mahasiswa = 1;
 		foreach ($nilai_sub_mata_kuliah as $key) {
 			$hasil += $key['hasil'];
 			$id_nilai_mahasiswa = $key['id_nilai_mahasiswa'];

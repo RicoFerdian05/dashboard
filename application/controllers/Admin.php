@@ -399,6 +399,7 @@ class Admin extends CI_Controller
 		$this->db->from("prestasi");
 		$this->db->join("mahasiswa", "prestasi.id_mahasiswa = mahasiswa.id");
 		$this->db->join("user", "mahasiswa.id_user = user.id");
+		$this->db->order_by("tahun", "DESC");
 		$data['data_prestasi'] = $this->db->get()->result_array();
 		$data['count_prestasi'] = $this->db->count_all("prestasi");
 
@@ -408,6 +409,7 @@ class Admin extends CI_Controller
 		$this->db->join("mahasiswa", "nilai_mata_kuliah.id_nilai_mahasiswa = mahasiswa.id");
 		$this->db->join("user", "mahasiswa.id_user = user.id");
 		$this->db->group_by("id_nilai_mahasiswa");
+		$this->db->order_by("avg_presensi", "ASC");
 		$data['data_kehadiran'] = $this->db->get()->result_array();
 		$data['count_kehadiran'] = count($data['data_kehadiran']);
 
