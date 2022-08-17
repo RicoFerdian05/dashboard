@@ -26,7 +26,7 @@
 	                    					<td>
                                                 <?php
                                             if ($m['active']==1) {
-                                                echo "Enebled";
+                                                echo "Enabled";
                                             } else{
                                                 echo "Disabled";
                                             } 

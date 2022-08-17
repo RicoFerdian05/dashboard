@@ -27,6 +27,7 @@ foreach ($menu as $m) :
     // Menyeleksi menu, menghilangkan menu (Dosen Wali, Mahasiswa, dan Kaprodi) untuk admin saja
     if ($role_id == "1") {
         if (
+            $m['id'] == '3' or
             $m['id'] == '4' or
             $m['id'] == '5' or
             $m['id'] == '6' or

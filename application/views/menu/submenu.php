@@ -36,7 +36,7 @@
                                             <td>
                                                 <?php
                                             if ($sm['is_active']==1) {
-                                                echo "Enebled";
+                                                echo "Enabled";
                                             } else{
                                                 echo "Disabled";
                                             } 
