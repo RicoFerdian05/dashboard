@@ -7,7 +7,7 @@
                     <?= form_error('tahun_ajaran','<div class="alert alert-danger" role="alert">','</div>'); ?>
                     <div class="row">
                         <div class="col-lg-6">
-                            <a href="" class="btn btn-primary mb-3 newTahunAjaranModalButton" data-toggle="modal" data-target="#newTahunAjaranModal">Add New School Years</a>
+                            <a href="" class="btn btn-primary mb-3 newTahunAjaranModalButton" data-toggle="modal" data-target="#newTahunAjaranModal">Tambah Tahun Ajaran Baru</a>
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
@@ -45,7 +45,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="newTahunAjaranModalLabel">Add New Education</h5>
+                            <h5 class="modal-title" id="newTahunAjaranModalLabel">Tambah Tahun Ajaran Baru</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -54,13 +54,13 @@
                             <input type="hidden" name="id" id="id">
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="tahun_ajaran" name="tahun_ajaran" placeholder="School Years">
+                                    <input type="text" class="form-control" id="tahun_ajaran" name="tahun_ajaran" placeholder="Tahun Ajaran">
                                     <?= form_error('tahun_ajaran','<small class="text-danger pl-3">','</small>'); ?>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                <button type="submit" class="btn btn-primary">Tambah</button>
                             </div>
                         </form>
                     </div>

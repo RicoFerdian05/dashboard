@@ -12,12 +12,12 @@
 					</div>
 					<div class="card-body">
 						<!-- <h5 class="card-title">Pertanyaan 1</h5> -->
-						<a href="" class="btn btn-primary mb-3 newPertanyaan1ModalButton" data-toggle="modal" data-target="#newPertanyaan1Modal">Add New Question</a>
+						<a href="" class="btn btn-primary mb-3 newPertanyaan1ModalButton" data-toggle="modal" data-target="#newPertanyaan1Modal">Tambah Pertanyaan Baru</a>
 						<table class="table table-hover">
 							<thead>
 								<tr>
 									<th scope="col">#</th>
-									<th scope="col">Question</th>
+									<th scope="col">Pertanyaan</th>
 									<th scope="col">Action</th>
 								</tr>
 							</thead>
@@ -46,12 +46,12 @@
 					</div>
 					<div class="card-body">
 						<!-- <h5 class="card-title">Pertanyaan 2</h5> -->
-						<a href="" class="btn btn-info mb-3 newPertanyaan2ModalButton" data-toggle="modal" data-target="#newPertanyaan2Modal">Add New Question</a>
+						<a href="" class="btn btn-info mb-3 newPertanyaan2ModalButton" data-toggle="modal" data-target="#newPertanyaan2Modal">Tambah Pertanyaan Baru</a>
 						<table class="table table-hover">
 							<thead>
 								<tr>
 									<th scope="col">#</th>
-									<th scope="col">Question</th>
+									<th scope="col">Pertanyaan</th>
 									<th scope="col">Action</th>
 								</tr>
 							</thead>
@@ -83,7 +83,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="newPertanyaan1ModalLabel">Add New Question 1</h5>
+				<h5 class="modal-title" id="newPertanyaan1ModalLabel">Tambah Pertanyaan 1</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -92,13 +92,13 @@
 				<input type="hidden" name="id" id="id1">
 				<div class="modal-body">
 					<div class="form-group">
-						<input type="text" class="form-control" id="pertanyaan1" name="pertanyaan" placeholder="Question">
+						<input type="text" class="form-control" id="pertanyaan1" name="pertanyaan" placeholder="Pertanyaan">
 						<?= form_error('pertanyaan','<small class="text-danger pl-3">','</small>'); ?>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="submit" class="btn btn-primary">Add</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+					<button type="submit" class="btn btn-primary">Tambah</button>
 				</div>
 			</form>
 		</div>
@@ -109,7 +109,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="newPertanyaan2ModalLabel">Add New Question 2</h5>
+				<h5 class="modal-title" id="newPertanyaan2ModalLabel">Tambah Pertanyaan 2</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -118,13 +118,13 @@
 				<input type="hidden" name="id" id="id2">
 				<div class="modal-body">
 					<div class="form-group">
-						<input type="text" class="form-control" id="pertanyaan2" name="pertanyaan" placeholder="Question">
+						<input type="text" class="form-control" id="pertanyaan2" name="pertanyaan" placeholder="Pertanyaan">
 						<?= form_error('pertanyaan','<small class="text-danger pl-3">','</small>'); ?>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="submit" class="btn btn-primary">Add</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+					<button type="submit" class="btn btn-primary">Tambah</button>
 				</div>
 			</form>
 		</div>

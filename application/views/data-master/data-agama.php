@@ -7,7 +7,7 @@
                     <?= form_error('agama','<div class="alert alert-danger" role="alert">','</div>'); ?>
                     <div class="row">
                     	<div class="col-lg-6">
-                		  <a href="" class="btn btn-primary mb-3 newAgamaModalButton" data-toggle="modal" data-target="#newAgamaModal">Add New Religion</a>
+                		  <a href="" class="btn btn-primary mb-3 newAgamaModalButton" data-toggle="modal" data-target="#newAgamaModal">Tambah Agama Baru</a>
                         	<table class="table table-hover">
                     			<thead>
                     				<tr>
@@ -45,7 +45,7 @@
             	<div class="modal-dialog">
             		<div class="modal-content">
             			<div class="modal-header">
-            				<h5 class="modal-title" id="newAgamaModalLabel">Add New Religion</h5>
+            				<h5 class="modal-title" id="newAgamaModalLabel">Tambah Agama Baru</h5>
             				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
             					<span aria-hidden="true">&times;</span>
             				</button>
@@ -54,13 +54,13 @@
             				<input type="hidden" name="id" id="id">
 	            			<div class="modal-body">
 	            				<div class="form-group">
-	            					<input type="text" class="form-control" id="agama" name="agama" placeholder="Religion">
+	            					<input type="text" class="form-control" id="agama" name="agama" placeholder="Agama">
                                     <?= form_error('agama','<small class="text-danger pl-3">','</small>'); ?>
 	            				</div>
 	            			</div>
 	            			<div class="modal-footer">
-	            				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	            				<button type="submit" class="btn btn-primary">Add</button>
+	            				<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+	            				<button type="submit" class="btn btn-primary">Tambah</button>
 	            			</div>
             			</form>
             		</div>

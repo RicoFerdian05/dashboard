@@ -30,7 +30,7 @@
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="<?= base_url('user/') ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    My Profile
+                                    Profilku
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?= base_url('auth/logout') ?>" data-toggle="modal" data-target="#logoutModal">

@@ -15,14 +15,14 @@
         				</div>
         			</div>
         			<div class="form-group row">
-        				<label for="name" class="col-sm-2 col-form-label">Name</label>
+        				<label for="name" class="col-sm-2 col-form-label">Nama Lengkap</label>
         				<div class="col-sm-10">
         					<input type="text" class="form-control" id="name" name="name" value="<?= $user['name'] ?>">
         					<?= form_error('name','<small class="text-danger pl-3">','</small>') ?>
         				</div>
         			</div>
         			<div class="form-group row">
-                        <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+                        <label for="gender" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="gender" id="gender">
                                 <option>Select Gender</option>
@@ -38,31 +38,31 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="place_of_birth" class="col-sm-2 col-form-label">Place of Birth</label>
+                        <label for="place_of_birth" class="col-sm-2 col-form-label">Tempat Lahir</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="place_of_birth" name="place_of_birth" value="<?= $user['place_of_birth'] ?>">
                             <?= form_error('place_of_birth','<small class="text-danger pl-3">','</small>') ?>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="birthday" class="col-sm-2 col-form-label">Birth Day</label>
+                        <label for="birthday" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                         <div class="col-sm-10">
                             <input type="date" class="form-control" id="birthday" name="birthday" value="<?= $user['birthday'] ?>">
                             <?= form_error('birthday','<small class="text-danger pl-3">','</small>') ?>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="phone_number" class="col-sm-2 col-form-label">Phone Number</label>
+                        <label for="phone_number" class="col-sm-2 col-form-label">Nomor Telepon</label>
                         <div class="col-sm-10">
                             <input type="number" class="form-control" id="phone_number" name="phone_number" value="<?= $user['phone_number'] ?>">
                             <?= form_error('phone_number','<small class="text-danger pl-3">','</small>') ?>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="religion_id" class="col-sm-2 col-form-label">Religion</label>
+                        <label for="religion_id" class="col-sm-2 col-form-label">Agama</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="religion_id" id="religion_id">
-                                <option value="">Select Religion</option>
+                                <option value="">Pilih Agama</option>
                                 <?php foreach ($agama as $row): ?>
                                     <?php if ($row['agama']== $user['agama']): ?>
                                         <option value="<?= $row['id'] ?>" selected>
@@ -80,14 +80,14 @@
                     </div>
                                 
                     <div class="form-group row">
-                        <label for="address" class="col-sm-2 col-form-label">Address</label>
+                        <label for="address" class="col-sm-2 col-form-label">Alamat Lengkap</label>
                         <div class="col-sm-10">
                             <textarea class="form-control" id="address" name="address" rows="3" placeholder="Address"><?= $user['address'] ?></textarea>
                             <?= form_error('address','<small class="text-danger pl-3">','</small>') ?>
                         </div>
                     </div>
                     <div class="form-group row">
-        				<div class="col-sm-2">Picture</div>
+        				<div class="col-sm-2">Gambar</div>
         				<div class="col-sm-10">
         					<div class="row">
         						<div class="col-sm-3">
@@ -96,7 +96,7 @@
         						<div class="col-sm-9">
         							<div class="custom-file">
         								<input type="file" class="custom-file-input" id="image" name="image">
-        								<label class="custom-file-label" for="image">Choose file</label>
+        								<label class="custom-file-label" for="image">Pilih file</label>
         							</div>
         						</div>
         					</div>
@@ -105,10 +105,10 @@
         			</div>
         			<div class="form-group row">
         				<div class="col-sm">
-        					<button type="submit" class="btn btn-primary float-right">Save</button>
+        					<button type="submit" class="btn btn-primary float-right">Simpan</button>
         				</div>
         			</div>
-                    <button type="button" class="btn btn-outline-danger btn-block" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
+                    <button type="button" class="btn btn-outline-danger btn-block" data-toggle="modal" data-target="#deleteAccountModal">Hapus Akun</button>
         			
         		</form>
         	</div>

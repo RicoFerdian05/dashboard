@@ -14,7 +14,7 @@
                 <div class="form-group">
                     <label for="selectNama">Nama Mahasiswa</label>
                     <select class="form-control" id="nama" name="nama" required>
-                        <option value="" disabled selected>Select Name</option>
+                        <option value="" disabled selected>Pilh Mahasiswa</option>
                         <?php foreach ($mahasiswa as $key) :?>
                         <option value="<?= $key['id']; ?>" ><?=$key['nim'].' | '. $key['name']; ?></option>
                         <?php endforeach ?>
@@ -28,7 +28,7 @@
                 <div class="form-group">
                     <label for="selectPeringkat">Peringkat</label>
                     <select class="form-control" id="peringkat" name="peringkat" required>
-                        <option value="" disabled selected>Select Ranking</option>
+                        <option value="" disabled selected>Pilih Peringkat</option>
                         <option value="Juara 1">Juara 1</option>
                         <option value="Juara 2">Juara 2</option>
                         <option value="Juara 3">Juara 3</option>
@@ -43,7 +43,7 @@
                 <div class="form-group">
                     <label for="kategori">Kategori</label>
                     <select class="form-control" id="kategori" name="kategori" required>
-                        <option value="" disabled selected>Select Category</option>
+                        <option value="" disabled selected>Pilih Kategori</option>
                         <option value="Individu">Invidu</option>
                         <option value="Kelompok">Kelompok</option>
                     </select>
@@ -74,15 +74,15 @@
                 <div class="form-group">
                     <label for="tahunPrestasi">Tahun Prestasi</label>
                     <input type="text" name="tahun" class="form-control" id="tahun" aria-describedby="tahunHelp" required>
-                    <small id="tahunHelp" class="form-text text-muted">Example: 2021</small>
+                    <small id="tahunHelp" class="form-text text-muted">Contoh: 2021</small>
                 </div>
             </div>
         </div>
 
         <div class="row mt-3">
             <div class="col">
-                <button type="submit" class="btn btn-success">Submit</button>
-                <a href="<?= base_url('Admin/') ?>" type="button" class="btn btn-secondary">Cancel</a>
+                <button type="submit" class="btn btn-success">Kirim</button>
+                <a href="<?= base_url('Admin/') ?>" type="button" class="btn btn-secondary">Kembali</a>
 
             </div>
         </div>

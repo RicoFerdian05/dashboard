@@ -10,7 +10,7 @@
                     <?= form_error('semester','<div class="alert alert-danger" role="alert">','</div>'); ?>
                     <div class="row">
                     	<div class="col-lg-11">
-                    		<a href="" class="btn btn-primary mb-3 newMataKuliahModalButton" data-toggle="modal" data-target="#newMataKuliahModal">Add New Course</a>
+                    		<a href="" class="btn btn-primary mb-3 newMataKuliahModalButton" data-toggle="modal" data-target="#newMataKuliahModal">Tambah Mata Kuliah</a>
                     		<table class="table table-hover">
                     			<thead>
                     				<tr>
@@ -56,7 +56,7 @@
             	<div class="modal-dialog">
             		<div class="modal-content">
             			<div class="modal-header">
-            				<h5 class="modal-title" id="newMataKuliahModalLabel">Add New Mata Kuliah</h5>
+            				<h5 class="modal-title" id="newMataKuliahModalLabel">Tambah Mata Kuliah Baru</h5>
             				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
             					<span aria-hidden="true">&times;</span>
             				</button>
@@ -65,11 +65,11 @@
             				<input type="hidden" name="id" id="id">
 	            			<div class="modal-body">
 	            				<div class="form-group">
-	            					<input type="text" class="form-control" id="kode_mata_kuliah" name="kode_mata_kuliah" placeholder="Courses Code">
+	            					<input type="text" class="form-control" id="kode_mata_kuliah" name="kode_mata_kuliah" placeholder="Kode Mata Kuliah">
                                     <?= form_error('kode_mata_kuliah','<small class="text-danger pl-3">','</small>'); ?>
 	            				</div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="nama_mata_kuliah" name="nama_mata_kuliah" placeholder="Courses Name">
+                                    <input type="text" class="form-control" id="nama_mata_kuliah" name="nama_mata_kuliah" placeholder="Nama Mata Kuliah">
                                     <?= form_error('nama_mata_kuliah','<small class="text-danger pl-3">','</small>'); ?>
                                 </div>
                                 <div class="form-group">
@@ -82,7 +82,7 @@
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" name="id_prodi" id="id_prodi">
-                                        <option value="">Select Study Program</option>
+                                        <option value="">Pilih Prodi</option>
                                         <?php foreach ($prodi as $key): ?>
                                             <option value="<?= $key['id'] ?>"><?= $key['nama_prodi'] ?></option>
                                         <?php endforeach ?>
@@ -90,8 +90,8 @@
                                 </div>
 	            			</div>
 	            			<div class="modal-footer">
-	            				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	            				<button type="submit" class="btn btn-primary">Add</button>
+	            				<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+	            				<button type="submit" class="btn btn-primary">Tambah</button>
 	            			</div>
             			</form>
             		</div>

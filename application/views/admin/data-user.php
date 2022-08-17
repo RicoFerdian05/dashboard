@@ -12,19 +12,19 @@
                     <div class="row">
                     	<div class="col-lg">
                             <div class="card">
-                                <div class="card-header"><i class="fas fa-table mr-1"></i>Data User</div>
+                                <div class="card-header"><i class="fas fa-table mr-1"></i>Data Pengguna</div>
                                 <div class="card-body">
                             		<table class="table table-hover" id="dataTable">
                             			<thead>
                             				<tr>
                             					<th scope="col">#</th>
-                            					<th scope="col">Name</th>
+                            					<th scope="col">Nama Lengkap</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">Role</th>
-                                                <th scope="col">Active</th>
-                                                <th scope="col">Date Created</th>
-                                                <th scope="col">Image</th>
-                            					<th scope="col">Action</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Tanggal Daftar</th>
+                                                <th scope="col">Gambar</th>
+                            					<th scope="col">Aksi</th>
                             				</tr>
                             			</thead>
                             			<tbody>
@@ -75,7 +75,7 @@
             	<div class="modal-dialog">
             		<div class="modal-content">
             			<div class="modal-header">
-            				<h5 class="modal-title" id="setRoleLabel">Set User Role</h5>
+            				<h5 class="modal-title" id="setRoleLabel">Ubah Role Pengguna</h5>
             				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
             					<span aria-hidden="true">&times;</span>
             				</button>
@@ -88,7 +88,7 @@
 	            				</div>
                                 <div class="form-group">
                                     <select class="form-control" name="role_id" id="role_id">
-                                        <option value="">Select Role</option>
+                                        <option value="">Pilih Role</option>
                                         <?php foreach ($role as $r): ?>
                                             <option value="<?= $r['id'] ?>"><?= $r['role'] ?></option>
                                         <?php endforeach ?>

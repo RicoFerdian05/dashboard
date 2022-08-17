@@ -22,7 +22,7 @@
 							<?php endif ?>
 						</button>
 						<div class="dropdown-menu" aria-labelledby="dropdownTahunAjaran">
-							<a class="dropdown-item" href="<?= base_url('Admin/') ?>">All school years</a>
+							<a class="dropdown-item" href="<?= base_url('Admin/') ?>">Semua tahun ajaran</a>
 							<?php foreach ($tahun_ajaran as $row) : ?>
 								<?php $tahun = str_replace('/', '_', $row['tahun_ajaran']) ?>
 								<?php if ($this->uri->segment(3) == $tahun) : ?>
@@ -184,7 +184,7 @@
         						</table>
         					</div>
         					<span style="font-size: 14px;">
-        						<br>Total Number of Columns <?= $count_beasiswa; ?>
+        						<br>Total Data: <?= $count_beasiswa; ?> Mahasiswa
         					</span>
         				</div>
         			</div>
@@ -244,7 +244,7 @@
         						</table>
         					</div>
         					<span style="font-size: 14px;">
-        						<br>Total number of columns <?= $count_prestasi; ?> Mahasiswa
+        						<br>Total Data: <?= $count_prestasi; ?> Mahasiswa
         					</span>
         				</div>
         			</div>
@@ -296,7 +296,7 @@
         						</table>
         					</div>
         					<span style="font-size: 14px;">
-        						<br> Total number of columns <?= $count_kehadiran; ?> Mahasiswa
+        						<br> Total Data: <?= $count_kehadiran; ?> Mahasiswa
         					</span>
         				</div>
         			</div>
@@ -357,7 +357,7 @@
                               </table>
                             </div>
                             <span style="font-size: 14px;">
-                              Total Number of Columns <?= $count_info; ?> Mahasiswa
+                              Total Data: <?= $count_info; ?> Mahasiswa
                             </span>
                           </div>
                         </div>

@@ -90,7 +90,7 @@ foreach ($menu as $m) :
 <?php if ($role_id == "1") {?>
         <a class="nav-link" href="<?= base_url('admin/about') ?>">
             <i class="fas fa-address-card"></i>
-            <span>About</span>
+            <span>Tentang</span>
         </a>
 <?php }?>
 

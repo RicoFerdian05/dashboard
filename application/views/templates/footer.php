@@ -251,7 +251,7 @@
 
         $(function() {
             $('.setRoleButton').on('click', function() {
-                $('#setRoleLabel').html('Set User Role');
+                $('#setRoleLabel').html('Pilih User Role');
                 $('.modal-footer button[type=submit]').html('Save');
                 const id = $(this).data('id');
                 jQuery.ajax({
@@ -307,15 +307,15 @@
 
         $(function() {
             $('.newAgamaModalButton').on('click', function(){
-                $('#newAgamaModalLabel').html('Add New Religion');
-                $('.modal-footer button[type=submit]').html('Add');
+                $('#newAgamaModalLabel').html('Tambah Agama Baru');
+                $('.modal-footer button[type=submit]').html('Tambah');
                 $('.modal-content form')[0].reset();
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/agama');
             });
 
             $('.updateAgamaModalButton').on('click', function() {
-                $('#newAgamaModalLabel').html('Edit Religion');
-                $('.modal-footer button[type=submit]').html('Save');
+                $('#newAgamaModalLabel').html('Ubah Agama');
+                $('.modal-footer button[type=submit]').html('Simpan');
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateAgama');
                 const id = $(this).data('id');
                 jQuery.ajax({
@@ -334,15 +334,15 @@
 
         $(function() {
             $('.newPendidikanModalButton').on('click', function(){
-                $('#newPendidikanModalLabel').html('Add New Education');
-                $('.modal-footer button[type=submit]').html('Add');
+                $('#newPendidikanModalLabel').html('Tambah Pendidikan Baru');
+                $('.modal-footer button[type=submit]').html('Tambah');
                 $('.modal-content form')[0].reset();
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/pendidikan');
             });
 
             $('.updatePendidikanModalButton').on('click', function() {
-                $('#newPendidikanModalLabel').html('Edit Education');
-                $('.modal-footer button[type=submit]').html('Save');
+                $('#newPendidikanModalLabel').html('Ubah Pendidikan');
+                $('.modal-footer button[type=submit]').html('Simpan');
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updatePendidikan');
                 const id = $(this).data('id');
                 jQuery.ajax({
@@ -361,15 +361,15 @@
 
         $(function() {
             $('.newPertanyaan1ModalButton').on('click', function(){
-                $('#newPertanyaan1ModalLabel').html('Add New Question 1');
-                $('.modal-footer button[type=submit]').html('Add');
+                $('#newPertanyaan1ModalLabel').html('Tambah Pertanyaan 1');
+                $('.modal-footer button[type=submit]').html('Tambah');
                 $('.modal-content form')[0].reset();
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/pertanyaan/1');
             });
 
             $('.updatePertanyaan1ModalButton').on('click', function() {
-                $('#newPertanyaan1ModalLabel').html('Edit Question 1');
-                $('.modal-footer button[type=submit]').html('Save');
+                $('#newPertanyaan1ModalLabel').html('Ubah Pertanyaan 1');
+                $('.modal-footer button[type=submit]').html('Simpan');
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updatePertanyaan/1');
                 const id = $(this).data('id');
                 jQuery.ajax({
@@ -388,15 +388,15 @@
 
         $(function() {
             $('.newPertanyaan2ModalButton').on('click', function(){
-                $('#newPertanyaan2ModalLabel').html('Add New Question 2');
-                $('.modal-footer button[type=submit]').html('Add');
+                $('#newPertanyaan2ModalLabel').html('Tambah Pertanyaan 2');
+                $('.modal-footer button[type=submit]').html('Tambah');
                 $('.modal-content form')[0].reset();
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/pertanyaan/2');
             });
 
             $('.updatePertanyaan2ModalButton').on('click', function() {
-                $('#newPertanyaan2ModalLabel').html('Edit Question 2');
-                $('.modal-footer button[type=submit]').html('Save');
+                $('#newPertanyaan2ModalLabel').html('Ubah Pertanyaan 2');
+                $('.modal-footer button[type=submit]').html('Simpan');
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updatePertanyaan/2');
                 const id = $(this).data('id');
                 jQuery.ajax({
@@ -415,15 +415,15 @@
 
         $(function() {
             $('.newKontenModalButton').on('click', function(){
-                $('#newKontenModalLabel').html('Add New Content');
-                $('.modal-footer button[type=submit]').html('Add');
+                $('#newKontenModalLabel').html('Tambah Konten Baru');
+                $('.modal-footer button[type=submit]').html('Tambah');
                 $('.modal-content form')[0].reset();
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/konten');
             });
 
             $('.updateKontenModalButton').on('click', function() {
-                $('#newKontenModalLabel').html('Edit Content');
-                $('.modal-footer button[type=submit]').html('Save');
+                $('#newKontenModalLabel').html('Ubah Konten');
+                $('.modal-footer button[type=submit]').html('Simpan');
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateKonten');
                 const id = $(this).data('id');
                 jQuery.ajax({
@@ -444,15 +444,15 @@
 
         $(function() {
             $('.newTahunAjaranModalButton').on('click', function(){
-                $('#newTahunAjaranModalLabel').html('Add New School Year');
-                $('.modal-footer button[type=submit]').html('Add');
+                $('#newTahunAjaranModalLabel').html('Tambah Tahun Ajaran Baru');
+                $('.modal-footer button[type=submit]').html('Tambah');
                 $('.modal-content form')[0].reset();
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/tahunAjaran');
             });
 
             $('.updateTahunAjaranModalButton').on('click', function() {
-                $('#newTahunAjaranModalLabel').html('Edit School Year');
-                $('.modal-footer button[type=submit]').html('Save');
+                $('#newTahunAjaranModalLabel').html('Ubah Tahun Ajaran');
+                $('.modal-footer button[type=submit]').html('Simpan');
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateTahunAjaran');
                 const id = $(this).data('id');
                 jQuery.ajax({
@@ -471,15 +471,15 @@
 
         $(function() {
             $('.newStatusMahasiswaModalButton').on('click', function(){
-                $('#newStatusMahasiswaModalLabel').html("Add New Student's Status");
-                $('.modal-footer button[type=submit]').html('Add');
+                $('#newStatusMahasiswaModalLabel').html("Tambah Status Mahasiswa Baru");
+                $('.modal-footer button[type=submit]').html('Tambah');
                 $('.modal-content form')[0].reset();
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/statusMahasiswa');
             });
 
             $('.updateStatusMahasiswaModalButton').on('click', function() {
-                $('#newStatusMahasiswaModalLabel').html("Edit Student's Status");
-                $('.modal-footer button[type=submit]').html('Save');
+                $('#newStatusMahasiswaModalLabel').html("Ubah Status Mahasiswa");
+                $('.modal-footer button[type=submit]').html('Simpan');
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateStatusMahasiswa');
                 const id = $(this).data('id');
                 jQuery.ajax({
@@ -498,15 +498,15 @@
 
         $(function() {
             $('.newFakultasModalButton').on('click', function(){
-                $('#newFakultasModalLabel').html('Add New Faculty');
-                $('.modal-footer button[type=submit]').html('Add');
+                $('#newFakultasModalLabel').html('Tambah Fakultas Baru');
+                $('.modal-footer button[type=submit]').html('Tambah');
                 $('.modal-content form')[0].reset();
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/fakultas');
             });
 
             $('.updateFakultasModalButton').on('click', function() {
-                $('#newFakultasModalLabel').html('Edit Faculty');
-                $('.modal-footer button[type=submit]').html('Save');
+                $('#newFakultasModalLabel').html('Ubah Fakultas');
+                $('.modal-footer button[type=submit]').html('Simpan');
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateFakultas');
                 const id = $(this).data('id');
                 jQuery.ajax({
@@ -526,15 +526,15 @@
 
         $(function() {
             $('.newProdiModalButton').on('click', function(){
-                $('#newProdiModalLabel').html('Add New Prodi');
-                $('.modal-footer button[type=submit]').html('Add');
+                $('#newProdiModalLabel').html('Tambah Prodi Baru');
+                $('.modal-footer button[type=submit]').html('Tambah');
                 $('.modal-content form')[0].reset();
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/prodi');
             });
 
             $('.updateProdiModalButton').on('click', function() {
-                $('#newProdiModalLabel').html('Edit Prodi');
-                $('.modal-footer button[type=submit]').html('Save');
+                $('#newProdiModalLabel').html('Ubah Prodi');
+                $('.modal-footer button[type=submit]').html('Simpan');
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateProdi');
                 const id = $(this).data('id');
                 jQuery.ajax({
@@ -556,15 +556,15 @@
 
         $(function() {
             $('.newKelasModalButton').on('click', function(){
-                $('#newKelasModalLabel').html('Add New Class');
-                $('.modal-footer button[type=submit]').html('Add');
+                $('#newKelasModalLabel').html('Tambah Kelas Baru');
+                $('.modal-footer button[type=submit]').html('Tambah');
                 $('.modal-content form')[0].reset();
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/kelas');
             });
 
             $('.updateKelasModalButton').on('click', function() {
-                $('#newKelasModalLabel').html('Edit Class');
-                $('.modal-footer button[type=submit]').html('Save');
+                $('#newKelasModalLabel').html('Edit Kelas');
+                $('.modal-footer button[type=submit]').html('Simpan');
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateKelas');
                 const id = $(this).data('id');
                 jQuery.ajax({
@@ -588,15 +588,15 @@
 
         $(function() {
             $('.newMataKuliahModalButton').on('click', function(){
-                $('#newMataKuliahModalLabel').html('Add New Course');
-                $('.modal-footer button[type=submit]').html('Add');
+                $('#newMataKuliahModalLabel').html('Tambah Mata Kuliah Baru');
+                $('.modal-footer button[type=submit]').html('Tambah');
                 $('.modal-content form')[0].reset();
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/mataKuliah');
             });
 
             $('.updateMataKuliahModalButton').on('click', function() {
-                $('#newMataKuliahModalLabel').html('Edit Course');
-                $('.modal-footer button[type=submit]').html('Save');
+                $('#newMataKuliahModalLabel').html('Ubah Mata Kuliah');
+                $('.modal-footer button[type=submit]').html('Simpan');
                 $('.modal-content form').attr('action', 'http://localhost/PROYEK_AKHIR/dashboard/DataMaster/updateMataKuliah');
                 const id = $(this).data('id');
                 jQuery.ajax({

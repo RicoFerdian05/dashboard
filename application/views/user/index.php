@@ -29,7 +29,7 @@
                                         <p class="card-text">Tanggal Lahir : <?= $user['birthday'] ?></p>
                                         <p class="card-text">Alamat : <?= $user['address'] ?></p>
                                     <?php endif ?>
-                                    <p class="card-text"><small class="text-muted">Member since <?= date('d F Y', $user['date_created']) ?></small></p>
+                                    <p class="card-text"><small class="text-muted">Pengguna terdaftrar sejak <?= date('d F Y', $user['date_created']) ?></small></p>
                                 </div>
                             </div>
                         </div>

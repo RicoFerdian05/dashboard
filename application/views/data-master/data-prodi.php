@@ -8,7 +8,7 @@
                     <?= form_error('nama_prodi','<div class="alert alert-danger" role="alert">','</div>'); ?>
                     <div class="row">
                     	<div class="col-lg-12">
-                    		<a href="" class="btn btn-primary mb-3 newProdiModalButton" data-toggle="modal" data-target="#newProdiModal">Add New Prodi</a>
+                    		<a href="" class="btn btn-primary mb-3 newProdiModalButton" data-toggle="modal" data-target="#newProdiModal">Tambah Prodi Baru</a>
                     		<table class="table table-hover">
                     			<thead>
                     				<tr>
@@ -16,7 +16,7 @@
                     					<th scope="col">Kode Prodi</th>
                                         <th scope="col">Nama Prodi</th>
                                         <th scope="col">Fakultas</th>
-                                        <th scope="col">Kaprodi</th>
+                                        <th scope="col">Nama Kaprodi</th>
                     					<th scope="col">Action</th>
                     				</tr>
                     			</thead>
@@ -52,7 +52,7 @@
             	<div class="modal-dialog">
             		<div class="modal-content">
             			<div class="modal-header">
-            				<h5 class="modal-title" id="newProdiModalLabel">Add New Prodi</h5>
+            				<h5 class="modal-title" id="newProdiModalLabel">Tambah Prodi Baru</h5>
             				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
             					<span aria-hidden="true">&times;</span>
             				</button>
@@ -61,16 +61,16 @@
             				<input type="hidden" name="id" id="id">
 	            			<div class="modal-body">
 	            				<div class="form-group">
-	            					<input type="text" class="form-control" id="kode_prodi" name="kode_prodi" placeholder="Prodi Code">
+	            					<input type="text" class="form-control" id="kode_prodi" name="kode_prodi" placeholder="Kode Prodi">
                                     <?= form_error('kode_prodi','<small class="text-danger pl-3">','</small>'); ?>
 	            				</div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="nama_prodi" name="nama_prodi" placeholder="Prodi Name">
+                                    <input type="text" class="form-control" id="nama_prodi" name="nama_prodi" placeholder="Nama Prodi">
                                     <?= form_error('nama_prodi','<small class="text-danger pl-3">','</small>'); ?>
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" name="id_fakultas" id="id_fakultas">
-                                        <option value="">Select Faculty</option>
+                                        <option value="">Pilih Fakultas</option>
                                         <?php foreach ($fakultas as $key): ?>
                                             <option value="<?= $key['id'] ?>"><?= $key['nama_fakultas'] ?></option>
                                         <?php endforeach ?>
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" name="id_kaprodi" id="id_kaprodi">
-                                        <option value="">Select Kaprodi</option>
+                                        <option value="">Pilih Nama Kaprodi</option>
                                         <?php foreach ($dosen as $key): ?>
                                             <option value="<?= $key['id'] ?>"><?= $key['kode_dosen'] ?></option>
                                         <?php endforeach ?>
@@ -87,8 +87,8 @@
                                 
 	            			</div>
 	            			<div class="modal-footer">
-	            				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	            				<button type="submit" class="btn btn-primary">Add</button>
+	            				<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+	            				<button type="submit" class="btn btn-primary">Tambah</button>
 	            			</div>
             			</form>
             		</div>

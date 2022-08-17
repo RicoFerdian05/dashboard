@@ -9,7 +9,7 @@
                     <?= form_error('nomor_ketua_kelas','<div class="alert alert-danger" role="alert">','</div>'); ?>
                     <div class="row">
                     	<div class="col-lg-12">
-                    		<a href="" class="btn btn-primary mb-3 newKelasModalButton" data-toggle="modal" data-target="#newKelasModal">Add New Class</a>
+                    		<a href="" class="btn btn-primary mb-3 newKelasModalButton" data-toggle="modal" data-target="#newKelasModal">Tambah Kelas Baru</a>
                     		<table class="table table-hover">
                     			<thead>
                     				<tr>
@@ -57,7 +57,7 @@
             	<div class="modal-dialog">
             		<div class="modal-content">
             			<div class="modal-header">
-            				<h5 class="modal-title" id="newKelasModalLabel">Add New Kelas</h5>
+            				<h5 class="modal-title" id="newKelasModalLabel">Tambah Kelas Baru</h5>
             				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
             					<span aria-hidden="true">&times;</span>
             				</button>
@@ -66,7 +66,7 @@
             				<input type="hidden" name="id" id="id">
 	            			<div class="modal-body">
 	            				<div class="form-group">
-	            					<input type="text" class="form-control" id="kelas" name="kelas" placeholder="Class Code">
+	            					<input type="text" class="form-control" id="kelas" name="kelas" placeholder="Kode Kelas">
                                     <?= form_error('kelas','<small class="text-danger pl-3">','</small>'); ?>
 	            				</div>
                                 <div class="form-group">
@@ -74,16 +74,16 @@
                                     <?= form_error('semester_kelas','<small class="text-danger pl-3">','</small>'); ?>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="nama_ketua_kelas" name="nama_ketua_kelas" placeholder="Leader Class Name">
+                                    <input type="text" class="form-control" id="nama_ketua_kelas" name="nama_ketua_kelas" placeholder="Nama Ketua Kelas">
                                     <?= form_error('nama_ketua_kelas','<small class="text-danger pl-3">','</small>'); ?>
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" class="form-control" id="nomor_ketua_kelas" name="nomor_ketua_kelas" placeholder="Phone Number Leader Class Name">
+                                    <input type="number" class="form-control" id="nomor_ketua_kelas" name="nomor_ketua_kelas" placeholder="Nomor Telepon Ketua Kelas">
                                     <?= form_error('nomor_ketua_kelas','<small class="text-danger pl-3">','</small>'); ?>
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" name="id_dosen_wali" id="id_dosen_wali">
-                                        <option value="">Select Guardian Lecturer</option>
+                                        <option value="">Pilih Dosen Wali</option>
                                         <?php foreach ($dosen as $key): ?>
                                             <option value="<?= $key['id'] ?>"><?= $key['kode_dosen'] ?></option>
                                         <?php endforeach ?>
@@ -91,7 +91,7 @@
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" name="id_prodi" id="id_prodi">
-                                        <option value="">Select Study Program</option>
+                                        <option value="">Pilih Program Studi</option>
                                         <?php foreach ($prodi as $key): ?>
                                             <option value="<?= $key['id'] ?>"><?= $key['nama_prodi'] ?></option>
                                         <?php endforeach ?>
@@ -100,8 +100,8 @@
                                 
 	            			</div>
 	            			<div class="modal-footer">
-	            				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	            				<button type="submit" class="btn btn-primary">Add</button>
+	            				<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+	            				<button type="submit" class="btn btn-primary">Tambah</button>
 	            			</div>
             			</form>
             		</div>

@@ -597,7 +597,7 @@ class DataMaster extends CI_Controller {
 	public function dashboard()
 	{
 		$data['title'] = "Data Dashboard";
-		$data['dashboard'] = $this->db->get('dashboard')->row_array();
+		$data['dashboard'] = $this->db->get('dashboard')->row_array(1);
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$this->form_validation->set_rules('header', 'Header', 'trim|required');
 		$this->form_validation->set_rules('title', 'Title', 'trim|required');

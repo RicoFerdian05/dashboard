@@ -488,7 +488,7 @@ class Admin extends CI_Controller
 
 	public function beasiswa()
 	{
-		$data['title'] = "Add New Shcolarship";
+		$data['title'] = "Tambah Data Beasiswa Baru";
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['dashboard'] = $this->db->get('dashboard')->row_array();
 
@@ -521,7 +521,7 @@ class Admin extends CI_Controller
 	}
 
 	public function prestasi(){
-		$data['title'] = "Add New Achievement";
+		$data['title'] = "Tambah Data Prestasi Baru";
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['dashboard'] = $this->db->get('dashboard')->row_array();
 
@@ -556,7 +556,7 @@ class Admin extends CI_Controller
 
 	public function about()
 	{
-		$data['title'] = "About";
+		$data['title'] = "Tentang";
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['dashboard'] = $this->db->get('dashboard')->row_array();
 		$this->load->view('templates/header', $data);
@@ -589,7 +589,7 @@ class Admin extends CI_Controller
 
 	public function dataUser()
 	{
-		$data['title'] = "Data User";
+		$data['title'] = "Data Pengguna";
 		$data['role'] = $this->db->get('user_role')->result_array();
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$this->db->select('*, user_role.id AS rid, user.id AS uid');

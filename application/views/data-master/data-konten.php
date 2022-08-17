@@ -7,7 +7,7 @@
                     <?= form_error('content','<div class="alert alert-danger" role="alert">','</div>'); ?>
                     <div class="row">
                         <div class="col-lg-12">
-                            <a href="" class="btn btn-primary mb-3 newKontenModalButton" data-toggle="modal" data-target="#newKontenModal">Add New Content</a>
+                            <a href="" class="btn btn-primary mb-3 newKontenModalButton" data-toggle="modal" data-target="#newKontenModal">Tambah Konten Baru</a>
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
@@ -51,7 +51,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="newKontenModalLabel">Add New Content</h5>
+                            <h5 class="modal-title" id="newKontenModalLabel">Tambah Konten Baru</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -74,8 +74,8 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                <button type="submit" class="btn btn-primary">Tambah</button>
                             </div>
                         </form>
                     </div>

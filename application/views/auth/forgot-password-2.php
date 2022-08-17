@@ -12,30 +12,30 @@
                             <div class="col-lg">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-2">Forgot Your Password?</h1>
-                                        <p class="mb-4">Enter Your email! for a Question</p>
+                                        <h1 class="h4 text-gray-900 mb-2">Lupa Password Anda?</h1>
+                                        <p class="mb-4">Masukkan email! Untuk sebuah pertanyaan</p>
                                     </div>
                                     <?= $this->session->flashdata('message'); ?>
                                     <form class="user" method="post" action="<?= base_url('auth/forgotPassword2') ?>">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="email" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address..." name="email" value="<?= set_value('email') ?>">
+                                                placeholder="Masukkan Email..." name="email" value="<?= set_value('email') ?>">
                                                 <?= form_error('email','<small class="text-danger pl-3">','</small>') ?>
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            Next
+                                            Lanjut
                                         </button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="<?= base_url('Auth/forgotPassword') ?>">use another method</a>
+                                        <a class="small" href="<?= base_url('Auth/forgotPassword') ?>">Gunakan cara lain</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="<?= base_url('Auth/registration') ?>">Create an Account!</a>
+                                        <a class="small" href="<?= base_url('Auth/registration') ?>">Buat Akun Baru!</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="<?= base_url('Auth/') ?>">Remember your password? Back to Login!</a>
+                                        <a class="small" href="<?= base_url('Auth/') ?>">Ingat password anda? Kembali Login!</a>
                                     </div>
                                 </div>
                             </div>

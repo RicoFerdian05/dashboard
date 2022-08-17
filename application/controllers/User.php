@@ -13,7 +13,7 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = "My Profile";
+		$data['title'] = "Profilku";
 		$this->db->select('*, user.id AS uid');
 		$this->db->join('agama', 'user.religion_id=agama.id');
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -32,7 +32,7 @@ class User extends CI_Controller {
 
 	public function edit()
 	{
-		$data['title'] = "Edit Profile";
+		$data['title'] = "Ubah Profil";
 		$this->db->join('agama', 'agama.id = user.religion_id');
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$this->form_validation->set_rules('name', 'Full Name', 'trim|required');
@@ -200,7 +200,7 @@ class User extends CI_Controller {
 
 	public function changePassword()
 	{
-		$data['title'] = "Change Password";
+		$data['title'] = "Ubah Password";
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$this->form_validation->set_rules('current_password', 'Current Password', 'trim|required');
 		$this->form_validation->set_rules('new_password1', 'New Password', 'trim|required|min_length[3]');
