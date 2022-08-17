@@ -45,7 +45,7 @@
                                                      ?>     
                                                     </td>
                                                     <td><?= $key['date_created'] ?></td>
-                                                    <td><img src="<?= base_url('assets/img/profile/').$key['image'] ?>" class="img-thumbnail"></td>
+                                                    <td><img src="<?= base_url('assets/img/profile/').$key['image'] ?>" class="img-thumbnail rounded" style="width: 20% ;"></td>
         	                    					<td>
         	                    						<a href="" class="badge badge-warning setRoleButton" data-toggle="modal" data-target="#setRoleModal" data-id="<?=$key['uid']?>">Set Role</a>
                                                         <?php if ($key['is_active']==1): ?>
