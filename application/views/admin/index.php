@@ -38,7 +38,7 @@
 				<div class="col-xl-2" style="margin-right: -70px;">
 					<a href="<?= base_url("Admin/beasiswa") ?>" type="button" class="btn btn-success">Tambah Data Beasiswa</a>
 				</div>
-				<div class="col-xl-2" style="">
+				<div class="col-xl-2">
 					<a href="<?= base_url("Admin/prestasi") ?>" type="button" class="btn btn-info">Tambah Data Prestasi</a>
 				</div>
 			</div>
@@ -335,8 +335,8 @@
                                     <th>NO</th>
                                     <th>NAMA LENGKAP</th>
                                     <th>TAK</th>
-                                    <th>SKS</th>
                                     <th>IPK</th>
+									<th>STATUS MAHASISWA</th>
                                     <th>STATUS PA</th>
                                   </tr>
                                 </thead>
@@ -348,8 +348,8 @@
                                     <td><?= $x++; ?></td>
                                     <td><?= $info['name']; ?></td>
                                     <td><?= $info['tak']; ?></td>
-                                    <td><?= $info['sum_sks']; ?></td>
                                     <td><?= $info['ipk']; ?></td>
+									<td><?= $info['status']; ?></td>
                                     <td><?= $info['status_pa'] ?></td>
                                   </tr>
                                   <?php endforeach; ?>

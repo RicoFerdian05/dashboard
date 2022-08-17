@@ -15,10 +15,11 @@ class Admin_model extends CI_Model {
 	public function getInfoMahasiswa( $keyword = null){
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$this->db->select('name, ipk, tak, SUM(sks) AS sum_sks, status_pa');
+		$this->db->select('name, ipk, tak, SUM(sks) AS sum_sks, status, status_pa');
 		$this->db->from('nilai_mata_kuliah');
 		$this->db->join('nilai_mahasiswa', 'nilai_mahasiswa.id_mahasiswa = nilai_mata_kuliah.id_nilai_mahasiswa');
 		$this->db->join('mahasiswa', 'mahasiswa.id = nilai_mahasiswa.id_mahasiswa');
+		$this->db->join('status_mahasiswa', 'status_mahasiswa.id = mahasiswa.id_status');
 		$this->db->join('user', 'user.id = mahasiswa.id_user');
 		$this->db->join('kelas', 'kelas.id=mahasiswa.id_kelas'); 
 		$this->db->join('pengampu', 'pengampu.id = nilai_mata_kuliah.id_pengampu');
