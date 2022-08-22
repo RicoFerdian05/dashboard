@@ -234,27 +234,9 @@
                                     <?= form_error('id_nilai_mahasiswa','<small class="text-danger pl-3">','</small>'); ?>
                                 </div>
                                 <div class="form-group">
-                                    <select class="form-control" name="indeks" id="indeks">
-                                        <option>Select Index</option>
-                                        <option value="A">A</option>
-                                        <option value="AB">AB</option>
-                                        <option value="B">B</option>
-                                        <option value="BC">BC</option>
-                                        <option value="C">C</option>
-                                        <option value="D">D</option>
-                                        <option value="E">E</option>
-                                        <option value="T">T</option>
-                                    </select>
-                                    <?= form_error('indeks','<small class="text-danger pl-3">','</small>'); ?>
-                                </div>
-                                <div class="form-group">
                                     <div class="form-row">
                                         <div class="col">
-                                            <input type="number" class="form-control" name="presensi1" id="presensi1" placeholder="Total Course">
-                                            <?= form_error('presensi2','<small class="text-danger pl-3">','</small>'); ?>
-                                        </div>
-                                        <div class="col">
-                                            <input type="number" class="form-control" name="presensi2" id="presensi2" placeholder="Total Presence">
+                                            <input type="text" class="form-control" name="presensi2" id="presensi2" placeholder="Total Presence ( 0-1 )">
                                             <?= form_error('presensi1','<small class="text-danger pl-3">','</small>'); ?>
                                         </div>
                                     </div>
@@ -329,3 +311,12 @@
                     </div>
                 </div>
             </div>
+            <?php
+            if (isset($_GET['print'])) {
+            ?> <script>
+                window.print();
+            </script>
+            <?php
+            unset($_GET['print']);
+            }
+            ?>

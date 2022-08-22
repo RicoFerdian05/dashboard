@@ -157,10 +157,6 @@
                             }
                             ?>
                             <a href="" class="btn btn-primary mb-3 newDetailSubNilaiMataKuliahModalButton" data-toggle="modal" data-target="#newDetailSubNilaiMataKuliahModal">Add New Score</a>
-                            <button type="button" class="btn btn-info mb-3" data-toggle="modal" data-target="#newUploadDetailSubNilaiMataKuliahModal">
-                                <i class="fas fa-upload"></i>
-                                Upload
-                            </button>
                             <table class="table table-hover">
                                 <thead>
                                     <tr>

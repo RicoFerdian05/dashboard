@@ -573,42 +573,6 @@ class Kaprodi extends CI_Controller {
 			$data['total_semester'] = $data['kelas']['semester_kelas'];
 			$semester_sebelum = $data['kelas']['semester_kelas']-1;
 
-			$this->db->like('kelas', $angkatan);
-			$data['kelas'] = $this->db->get('kelas')->row_array();
-			// $data['cur_semester'] = $semester;
-			$this->db->select("*, u1.id AS uid, m1.id AS mid, n1.id AS nmid, (SELECT ip FROM user u2 JOIN mahasiswa m2 ON u2.id=m2.id_user JOIN nilai_mahasiswa n2 ON m2.id=n2.id_mahasiswa JOIN ip_semester i2 ON n2.id=i2.id_nilai_mahasiswa WHERE u2.id = uid AND i2.semester = $semester_sebelum) AS ip_sebelum, (i1.ip - (SELECT ip FROM user u2 JOIN mahasiswa m2 ON u2.id=m2.id_user JOIN nilai_mahasiswa n2 ON m2.id=n2.id_mahasiswa JOIN ip_semester i2 ON n2.id=i2.id_nilai_mahasiswa WHERE u2.id = uid AND i2.semester = $semester_sebelum)) AS selisih");
-			$this->db->from('user u1');
-			$this->db->where('m1.angkatan', $angkatan);
-			$this->db->where('i1.semester', $data['kelas']['semester_kelas']);
-			$this->db->join('mahasiswa m1', 'u1.id=m1.id_user');
-			$this->db->join('nilai_mahasiswa n1', 'm1.id=n1.id_mahasiswa');
-			$this->db->join('ip_semester i1', 'n1.id=i1.id_nilai_mahasiswa');
-			if (!$sort_by) {
-				$this->db->order_by('i1.ip', 'DESC');
-			} elseif(!$sort){
-				$this->db->order_by($sort_by, 'DESC');
-			} else{
-				$this->db->order_by($sort_by, $sort);
-			}
-			$this->db->limit(5);
-			$data['mahasiswa_ip_tertinggi'] = $this->db->get()->result_array();
-			
-			$this->db->select("*, u1.id AS uid, m1.id AS mid, n1.id AS nmid, (SELECT ip FROM user u2 JOIN mahasiswa m2 ON u2.id=m2.id_user JOIN nilai_mahasiswa n2 ON m2.id=n2.id_mahasiswa JOIN ip_semester i2 ON n2.id=i2.id_nilai_mahasiswa WHERE u2.id = uid AND i2.semester = $semester_sebelum) AS ip_sebelum, (i1.ip - (SELECT ip FROM user u2 JOIN mahasiswa m2 ON u2.id=m2.id_user JOIN nilai_mahasiswa n2 ON m2.id=n2.id_mahasiswa JOIN ip_semester i2 ON n2.id=i2.id_nilai_mahasiswa WHERE u2.id = uid AND i2.semester = $semester_sebelum)) AS selisih");
-			$this->db->from('user u1');
-			$this->db->where('m1.angkatan', $angkatan);
-			$this->db->where('i1.semester', $data['kelas']['semester_kelas']);
-			$this->db->join('mahasiswa m1', 'u1.id=m1.id_user');
-			$this->db->join('nilai_mahasiswa n1', 'm1.id=n1.id_mahasiswa');
-			$this->db->join('ip_semester i1', 'n1.id=i1.id_nilai_mahasiswa');
-			if (!$sort_by) {
-				$this->db->order_by('ip', 'ASC');
-			} elseif(!$sort){
-				$this->db->order_by($sort_by, 'ASC');
-			} else{
-				$this->db->order_by($sort_by, $sort);
-			}
-			$this->db->limit(5);
-			$data['mahasiswa_ip_terendah'] = $this->db->get()->result_array();
 		} else{
 			$data['total_semester'] = null;
 		}
@@ -626,39 +590,88 @@ class Kaprodi extends CI_Controller {
 		$data['kelas'] = $this->db->get('kelas')->row_array();
 		$data['cur_semester'] = $semester;
 		$semester_sebelum = $semester-1;
-		$this->db->select("*, u1.id AS uid, m1.id AS mid, n1.id AS nmid, (SELECT ip FROM user u2 JOIN mahasiswa m2 ON u2.id=m2.id_user JOIN nilai_mahasiswa n2 ON m2.id=n2.id_mahasiswa JOIN ip_semester i2 ON n2.id=i2.id_nilai_mahasiswa WHERE u2.id = uid AND i2.semester = $semester_sebelum) AS ip_sebelum, (i1.ip - (SELECT ip FROM user u2 JOIN mahasiswa m2 ON u2.id=m2.id_user JOIN nilai_mahasiswa n2 ON m2.id=n2.id_mahasiswa JOIN ip_semester i2 ON n2.id=i2.id_nilai_mahasiswa WHERE u2.id = uid AND i2.semester = $semester_sebelum)) AS selisih");
-		$this->db->from('user u1');
-		$this->db->where('m1.angkatan', $angkatan);
-		$this->db->where('i1.semester', $semester);
-		$this->db->join('mahasiswa m1', 'u1.id=m1.id_user');
-		$this->db->join('nilai_mahasiswa n1', 'm1.id=n1.id_mahasiswa');
-		$this->db->join('ip_semester i1', 'n1.id=i1.id_nilai_mahasiswa');
-		if (!$sort_by) {
+		if ($sort_by == 'prestasi') {
+			$this->db->select("m1.id AS mid, nim, name, ip, COUNT(id_prestasi) AS jml_prestasi, n1.id AS nmid");
+			$this->db->from('user u1');
+			$this->db->where('m1.angkatan', $angkatan);
+			$this->db->where('i1.semester', $semester);
+			$this->db->join('mahasiswa m1', 'u1.id=m1.id_user');
+			$this->db->join('nilai_mahasiswa n1', 'm1.id=n1.id_mahasiswa');
+			$this->db->join('ip_semester i1', 'n1.id=i1.id_nilai_mahasiswa');
+			$this->db->join('prestasi', 'prestasi.id_mahasiswa = m1.id');
+			$this->db->group_by('m1.id');
+			$this->db->order_by('jml_prestasi', 'DESC');
+			$this->db->limit(5);
+			$data['mahasiswa_ip_tertinggi'] = $this->db->get()->result_array();
+
+			$this->db->select("m1.id AS mid, nim, name, ip, COUNT(id_prestasi) AS jml_prestasi, n1.id AS nmid");
+			$this->db->from('user u1');
+			$this->db->where('m1.angkatan', $angkatan);
+			$this->db->where('i1.semester', $semester);
+			$this->db->join('mahasiswa m1', 'u1.id=m1.id_user');
+			$this->db->join('nilai_mahasiswa n1', 'm1.id=n1.id_mahasiswa');
+			$this->db->join('ip_semester i1', 'n1.id=i1.id_nilai_mahasiswa');
+			$this->db->join('prestasi', 'prestasi.id_mahasiswa = m1.id');
+			$this->db->group_by('m1.id');
+			$this->db->order_by('jml_prestasi', 'ASC');
+			$this->db->limit(5);
+			$data['mahasiswa_ip_terendah'] = $this->db->get()->result_array();
+		} else {
+			$this->db->select("m1.id AS mid, nim, name, ip, n1.id AS nmid");
+			$this->db->from('user u1');
+			$this->db->where('m1.angkatan', $angkatan);
+			$this->db->where('i1.semester', $semester);
+			$this->db->join('mahasiswa m1', 'u1.id=m1.id_user');
+			$this->db->join('nilai_mahasiswa n1', 'm1.id=n1.id_mahasiswa');
+			$this->db->join('ip_semester i1', 'n1.id=i1.id_nilai_mahasiswa');
 			$this->db->order_by('ip', 'DESC');
-		} elseif(!$sort){
-			$this->db->order_by($sort_by, 'DESC');
-		} else{
-			$this->db->order_by($sort_by, $sort);
-		}
-		$this->db->limit(5);
-		$data['mahasiswa_ip_tertinggi'] = $this->db->get()->result_array();
-		
-		$this->db->select("*, u1.id AS uid, m1.id AS mid, n1.id AS nmid, (SELECT ip FROM user u2 JOIN mahasiswa m2 ON u2.id=m2.id_user JOIN nilai_mahasiswa n2 ON m2.id=n2.id_mahasiswa JOIN ip_semester i2 ON n2.id=i2.id_nilai_mahasiswa WHERE u2.id = uid AND i2.semester = $semester_sebelum) AS ip_sebelum, (i1.ip - (SELECT ip FROM user u2 JOIN mahasiswa m2 ON u2.id=m2.id_user JOIN nilai_mahasiswa n2 ON m2.id=n2.id_mahasiswa JOIN ip_semester i2 ON n2.id=i2.id_nilai_mahasiswa WHERE u2.id = uid AND i2.semester = $semester_sebelum)) AS selisih");
-		$this->db->from('user u1');
-		$this->db->where('m1.angkatan', $angkatan);
-		$this->db->where('i1.semester', $semester);
-		$this->db->join('mahasiswa m1', 'u1.id=m1.id_user');
-		$this->db->join('nilai_mahasiswa n1', 'm1.id=n1.id_mahasiswa');
-		$this->db->join('ip_semester i1', 'n1.id=i1.id_nilai_mahasiswa');
-		if (!$sort_by) {
+			$this->db->limit(5);
+			$data['mahasiswa_ip_tertinggi'] = $this->db->get()->result_array();
+
+			$jml_prestasi = array();
+			foreach ($data['mahasiswa_ip_tertinggi'] as $key):
+				$this->db->select("COUNT(id_prestasi) AS jml_prestasi");
+				$this->db->from("prestasi");
+				$this->db->where('id_mahasiswa', $key['mid']);
+				$ip_tertinggi = array('nim' => $key['nim'],
+									'name' => $key['name'],
+									'ip' => $key['ip'],
+									'nmid' => $key['nmid'],
+									'sort' => $sort_by,
+									$this->db->get()->row_array());
+				
+				array_push($jml_prestasi, $ip_tertinggi);
+			endforeach;
+			$data['mahasiswa_ip_tertinggi'] = $jml_prestasi;
+
+
+			$this->db->select("m1.id AS mid, nim, name, ip, n1.id AS nmid");
+			$this->db->from('user u1');
+			$this->db->where('m1.angkatan', $angkatan);
+			$this->db->where('i1.semester', $semester);
+			$this->db->join('mahasiswa m1', 'u1.id=m1.id_user');
+			$this->db->join('nilai_mahasiswa n1', 'm1.id=n1.id_mahasiswa');
+			$this->db->join('ip_semester i1', 'n1.id=i1.id_nilai_mahasiswa');
 			$this->db->order_by('ip', 'ASC');
-		} elseif(!$sort){
-			$this->db->order_by($sort_by, 'ASC');
-		} else{
-			$this->db->order_by($sort_by, $sort);
+			$this->db->limit(5);
+			$data['mahasiswa_ip_terendah'] = $this->db->get()->result_array();
+
+			$jml_prestasi = array();
+			foreach ($data['mahasiswa_ip_terendah'] as $key):
+				$this->db->select("COUNT(id_prestasi) AS jml_prestasi");
+				$this->db->from("prestasi");
+				$this->db->where('id_mahasiswa', $key['mid']);
+				$ip_terendah = array('nim' => $key['nim'],
+									'name' => $key['name'],
+									'ip' => $key['ip'],
+									'nmid' => $key['nmid'],
+									'sort' => $sort_by,
+									$this->db->get()->row_array());
+				
+				array_push($jml_prestasi, $ip_terendah);
+			endforeach;
+			$data['mahasiswa_ip_terendah'] = $jml_prestasi;
 		}
-		$this->db->limit(5);
-		$data['mahasiswa_ip_terendah'] = $this->db->get()->result_array();
 		$this->load->view('kaprodi/top-semester', $data);
 	}
 

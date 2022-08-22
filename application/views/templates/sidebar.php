@@ -66,10 +66,13 @@ foreach ($menu as $m) :
         <?= $m['menu'] ?>
     </div>
     <?php
-                $queryMenu = "SELECT * FROM user_sub_menu AS usm JOIN user_menu AS um ON usm.menu_id = um.id WHERE usm.menu_id = $m[id] AND usm.is_active = 1";
+                $queryMenu = "SELECT *, usm.id AS submenu_id FROM user_sub_menu AS usm JOIN user_menu AS um ON usm.menu_id = um.id WHERE usm.menu_id = $m[id] AND usm.is_active = 1";
                 $subMenu = $this->db->query($queryMenu)->result_array();
                 ?>
-    <?php foreach ($subMenu as $sm) : ?>
+    <?php foreach ($subMenu as $sm) : 
+        if ($sm['submenu_id'] == 25) {
+            continue;
+        } else {?>
     <!-- Nav Item - Dashboard -->
     <?php if ($sm['title'] == $title) : ?>
     <li class="nav-item active">
@@ -80,7 +83,7 @@ foreach ($menu as $m) :
             <i class="<?= $sm['icon'] ?>"></i>
             <span><?= $sm['title'] ?></span></a>
     </li>
-<?php endforeach ?>
+<?php } endforeach ?>
     <!-- Divider -->
     <hr class="sidebar-divider mt-3">
 

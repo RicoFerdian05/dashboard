@@ -136,10 +136,8 @@
                                                     <td><?= $key['tak'] ?></td>
                                                     <td><?= $key['sum_sks'] ?></td>
                                 					<td>
-                                						<a href="" class="badge badge-warning"><i class="fas fa-download"></i></a>
+                                						<a href="<?= base_url("Dosen/nilaiMataKuliah/$key[nmid]"); ?>?print=yes" target="_blank" class="badge badge-warning"><i class="fas fa-download"></i>Print</a>
                                                         <a href="<?= base_url("Dosen/nilaiMataKuliah/$key[nmid]"); ?>" class="badge badge-primary">Detail</a>
-                                                        <a href="<?= base_url("Dosen/updateNilaiMahasiswa/$key[nmid]"); ?>" class="badge badge-success updateNilaiMahasiswaModalButton" data-toggle="modal" data-target="#newNilaiMahasiswaModal" data-id="<?=$key['nmid']?>">Edit</a>
-                                						<a href="<?= base_url("Dosen/deleteNilaiMahasiswa/$key[nmid]"); ?>" class="badge badge-danger" onclick="return confirm('Are you sure?');">Delete</a>
                                 					</td>
                                 				</tr>
                                 			<?php $no++; ?>

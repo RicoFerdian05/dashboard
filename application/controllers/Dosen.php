@@ -883,9 +883,6 @@ class Dosen extends CI_Controller {
 		$this->db->join('dosen', 'dosen.id=pengampu.id_dosen');
 		$data['pengampu'] = $this->db->get()->result_array();
 		$this->form_validation->set_rules('id_nilai_mahasiswa', 'Student', 'required');
-		$this->form_validation->set_rules('indeks', 'Index', 'required');
-		$this->form_validation->set_rules('presensi1', 'Total Course', 'required');
-		$this->form_validation->set_rules('presensi2', 'Total Presence', 'required');
 		$this->form_validation->set_rules('tahun_ajaran', 'Academic Year', 'required');
 		$this->form_validation->set_rules('semester', 'Semester', 'required');
 		$this->form_validation->set_rules('id_pengampu', 'Lecturer Course', 'required');
@@ -896,12 +893,10 @@ class Dosen extends CI_Controller {
 			$this->load->view('dosen/data-nilai-mata-kuliah', $data);
 			$this->load->view('templates/footer');
 		} else{
-			$presensi1 = $this->input->post('presensi1');
-			$presensi2 = $this->input->post('presensi2');
-			$presensi = $presensi2/$presensi1;
+			$presensi = $this->input->post('presensi2');
 			$this->db->insert('nilai_mata_kuliah', [
 				'id_nilai_mahasiswa' => $this->input->post('id_nilai_mahasiswa'),
-				'indeks' => $this->input->post('indeks'),
+				'indeks' => 'T',
 				'presensi' => $presensi,
 				'tahun_ajaran' => $this->input->post('tahun_ajaran'),
 				'semester' => $this->input->post('semester'),
@@ -2088,7 +2083,6 @@ class Dosen extends CI_Controller {
 	public function updateNilaiMataKuliah()
 	{
 		$this->form_validation->set_rules('id_nilai_mahasiswa', 'Student', 'required');
-		$this->form_validation->set_rules('indeks', 'Index', 'required');
 		$this->form_validation->set_rules('tahun_ajaran', 'Academic Year', 'required');
 		$this->form_validation->set_rules('semester', 'Semester', 'required');
 		$this->form_validation->set_rules('id_pengampu', 'Lecturer Course', 'required');
@@ -2096,16 +2090,13 @@ class Dosen extends CI_Controller {
 			redirect('Dosen/nilaiMataKuliah');
 		} else{
 			if (!empty($this->input->post('presensi1')) || !empty($this->input->post('presensi2'))) {
-				$presensi1 = $this->input->post('presensi1');
-				$presensi2 = $this->input->post('presensi2');
-				$presensi = $presensi2/$presensi1;
+				$presensi = $this->input->post('presensi2');
 			} else{
 				$presensi = $this->input->post('presensi');
 			}
 			$this->db->where('id', $this->input->post('id'));
 			$this->db->update('nilai_mata_kuliah', [
 				'id_nilai_mahasiswa' => $this->input->post('id_nilai_mahasiswa'),
-				'indeks' => $this->input->post('indeks'),
 				'presensi' => $presensi,
 				'tahun_ajaran' => $this->input->post('tahun_ajaran'),
 				'semester' => $this->input->post('semester'),
